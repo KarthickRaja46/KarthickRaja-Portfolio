@@ -1,6 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
-const SITEMAP_PATH = 'sitemap.xml';
+const SITEMAP_PATH = 'public/sitemap.xml';
 const LASTMOD_PATTERN = /<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/;
 const today = new Date().toISOString().slice(0, 10);
 const checkOnly = process.argv.includes('--check');
@@ -20,7 +20,7 @@ if (currentDate === today) {
 }
 
 if (checkOnly) {
-  throw new Error(`Sitemap lastmod is stale (${currentDate}); expected ${today}. Run: node scripts/update-sitemap-lastmod.mjs`);
+  throw new Error(`Sitemap lastmod is stale (${currentDate}); expected ${today}. Run: npm run sitemap`);
 }
 
 const updated = sitemap.replace(LASTMOD_PATTERN, `<lastmod>${today}</lastmod>`);
