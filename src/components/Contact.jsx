@@ -7,6 +7,9 @@ import Reveal from './ui/Reveal';
 import SectionHeading from './ui/SectionHeading';
 import './Contact.css';
 
+// Web3Forms access key (free, set in Vercel env). Without it the form uses mailto.
+const FORM_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
+
 const channels = [
   { icon: LuMapPin, label: 'Location', value: profile.locationLong },
   { icon: LuPhone, label: 'Phone', value: profile.phone, href: profile.phoneHref },
@@ -19,6 +22,7 @@ const channels = [
 export default function Contact() {
   const [copied, setCopied] = useState(false);
   const [status, setStatus] = useState('');
+  const [sending, setSending] = useState(false);
 
   useEffect(() => {
     if (!copied) return;
@@ -35,13 +39,49 @@ export default function Contact() {
     }
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const data = new FormData(form);
     const field = (key) => String(data.get(key) || '').trim();
-    const body = `Name: ${field('name')}\r\nEmail: ${field('email')}\r\n\r\nMessage:\r\n${field('message')}`;
-    window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(field('subject'))}&body=${encodeURIComponent(body)}`;
-    setStatus('Opening your email app with the message ready to send…');
+
+    // No form key configured: fall back to opening the visitor's mail app.
+    if (!FORM_KEY) {
+      const body = `Name: ${field('name')}
+Email: ${field('email')}
+
+Message:
+${field('message')}`;
+      window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(field('subject'))}&body=${encodeURIComponent(body)}`;
+      setStatus('Opening your email app with the message ready to send…');
+      return;
+    }
+
+    setSending(true);
+    setStatus('Sending…');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: FORM_KEY,
+          subject: `Portfolio: ${field('subject')}`,
+          from_name: field('name'),
+          name: field('name'),
+          email: field('email'),
+          message: field('message'),
+          botcheck: data.get('botcheck') ? true : '',
+        }),
+      });
+      const json = await res.json();
+      if (!json.success) throw new Error(json.message);
+      form.reset();
+      setStatus('Thanks — your message was sent. I’ll reply by email soon.');
+    } catch {
+      setStatus(`Sorry, that didn’t go through. Please email me directly at ${profile.email}.`);
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -108,6 +148,8 @@ export default function Contact() {
             <h3 className="contact__form-title">{contact.formTitle}</h3>
             <p className="contact__form-intro">{contact.formIntro}</p>
             <form className="form" onSubmit={handleSubmit}>
+              {/* Honeypot: hidden from people, filled in by spam bots. */}
+              <input type="checkbox" name="botcheck" className="sr-only" tabIndex={-1} autoComplete="off" aria-hidden="true" />
               <div className="form__row">
                 <label className="field">
                   <span className="field__label">Your name</span>
@@ -126,11 +168,14 @@ export default function Contact() {
                 <span className="field__label">Message</span>
                 <textarea name="message" rows="4" placeholder="Hi Karthick, I'd like to connect regarding…" required />
               </label>
-              <button type="submit" className="btn btn--gold form__submit">
-                Compose email <LuSend aria-hidden="true" />
+              <button type="submit" className="btn btn--gold form__submit" disabled={sending}>
+                {FORM_KEY ? 'Send message' : 'Compose email'} <LuSend aria-hidden="true" />
               </button>
               <p className="form__note" role="status">
-                {status || 'Prepares a direct email to Karthick Raja in your mail app.'}
+                {status ||
+                  (FORM_KEY
+                    ? 'Goes straight to my inbox.'
+                    : 'Prepares a direct email to Karthick Raja in your mail app.')}
               </p>
             </form>
           </Reveal>

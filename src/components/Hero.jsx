@@ -1,34 +1,34 @@
 import { useEffect, useRef, useState } from 'react';
-import {
-  AnimatePresence,
-  motion,
-  useMotionValue,
-  useReducedMotion,
-  useSpring,
-  useTransform,
-} from 'motion/react';
-import { LuArrowDownRight, LuArrowUpRight, LuChartColumn, LuDownload, LuSparkles } from 'react-icons/lu';
+import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring, useTransform } from 'motion/react';
+import { LuArrowDownRight, LuArrowUpRight, LuChartColumn, LuFileText, LuSparkles } from 'react-icons/lu';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa6';
 import { about, hero, profile } from '../data/content';
 import { rich } from '../lib/rich';
+import { useIntroDone } from '../lib/intro';
 import Counter from './ui/Counter';
 import { EASE } from './ui/Reveal';
 import './Hero.css';
 
-const fadeUp = (delay) => ({
-  initial: { opacity: 0, y: 24, filter: 'blur(10px)' },
-  animate: { opacity: 1, y: 0, filter: 'blur(0px)' },
+const HIDDEN = { opacity: 0, y: 24, filter: 'blur(10px)' };
+const SHOWN = { opacity: 1, y: 0, filter: 'blur(0px)' };
+
+// Entrance animations hold until the intro curtain lifts.
+const fadeUp = (ready, delay) => ({
+  initial: HIDDEN,
+  animate: ready ? SHOWN : HIDDEN,
   transition: { duration: 1, ease: EASE, delay },
 });
 
 const status = about.details.find((row) => row.label === 'Status')?.value;
 
 export default function Hero() {
+  const ready = useIntroDone();
+
   return (
     <section id="home" className="hero">
       <div className="container hero__grid">
         <div className="hero__copy">
-          <motion.p className="hero__status" {...fadeUp(0.1)}>
+          <motion.p className="hero__status" {...fadeUp(ready, 0.1)}>
             <span className="pulse-dot" aria-hidden="true" />
             {profile.availability}
             <span className="hero__status-sep" aria-hidden="true" />
@@ -39,9 +39,9 @@ export default function Hero() {
             {[profile.firstName, profile.lastName].map((word, i) => (
               <span className="hero__line" key={word}>
                 <motion.span
-                  className={`hero__word ${i === 1 ? 'text-iris' : ''}`}
+                  className={`hero__word ${i === 1 ? 'text-iris' : 'sheen'}`}
                   initial={{ y: '105%', rotate: 4 }}
-                  animate={{ y: '0%', rotate: 0 }}
+                  animate={ready ? { y: '0%', rotate: 0 } : undefined}
                   transition={{ duration: 1.2, ease: EASE, delay: 0.2 + i * 0.12 }}
                 >
                   {word}
@@ -50,30 +50,24 @@ export default function Hero() {
             ))}
           </h1>
 
-          <motion.p className="hero__role" {...fadeUp(0.5)}>
+          <motion.p className="hero__role" {...fadeUp(ready, 0.5)}>
             {profile.role}
           </motion.p>
 
-          <motion.div {...fadeUp(0.6)}>
+          <motion.div {...fadeUp(ready, 0.6)}>
             <RotatingPhrase phrases={hero.rotatingPhrases} />
           </motion.div>
 
-          <motion.p className="hero__tagline" {...fadeUp(0.7)}>
+          <motion.p className="hero__tagline" {...fadeUp(ready, 0.7)}>
             {rich(hero.tagline)}
           </motion.p>
 
-          <motion.div className="hero__actions" {...fadeUp(0.8)}>
+          <motion.div className="hero__actions" {...fadeUp(ready, 0.8)}>
             <a href="#contact" className="btn btn--gold">
               Get in touch <LuArrowUpRight aria-hidden="true" />
             </a>
-            <a
-              href={profile.resume}
-              className="btn btn--glass"
-              target="_blank"
-              rel="noopener noreferrer"
-              download={profile.resumeFileName}
-            >
-              <LuDownload aria-hidden="true" /> View resume
+            <a href={profile.resume} className="btn btn--glass" target="_blank" rel="noopener noreferrer">
+              <LuFileText aria-hidden="true" /> View resume
             </a>
             <a href={profile.linkedin} className="icon-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
               <FaLinkedinIn aria-hidden="true" />
@@ -83,7 +77,7 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <motion.dl className="hero__stats" {...fadeUp(0.9)}>
+          <motion.dl className="hero__stats" {...fadeUp(ready, 0.9)}>
             {hero.stats.map((stat) => (
               <div className="glass hero__stat" key={stat.label}>
                 <dt className="label">{stat.label}</dt>
@@ -103,7 +97,7 @@ export default function Hero() {
         className="hero__scroll"
         aria-label="Scroll to About section"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={ready ? { opacity: 1 } : undefined}
         transition={{ delay: 1.6, duration: 1 }}
       >
         <span className="hero__mouse" aria-hidden="true">
@@ -155,6 +149,7 @@ function RotatingPhrase({ phrases }) {
 
 function HeroVisual() {
   const ref = useRef(null);
+  const ready = useIntroDone();
   const reduceMotion = useReducedMotion();
   const px = useMotionValue(0);
   const py = useMotionValue(0);
@@ -183,7 +178,7 @@ function HeroVisual() {
 
   const pop = (delay) => ({
     initial: { opacity: 0, scale: 0.8, filter: 'blur(8px)' },
-    animate: { opacity: 1, scale: 1, filter: 'blur(0px)' },
+    animate: ready ? { opacity: 1, scale: 1, filter: 'blur(0px)' } : undefined,
     transition: { duration: 0.9, ease: EASE, delay },
   });
 
@@ -194,7 +189,7 @@ function HeroVisual() {
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
       initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
+      animate={ready ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 1.4, ease: EASE, delay: 0.3 }}
     >
       <div className="hero-visual__halo" aria-hidden="true" />
@@ -237,26 +232,6 @@ function HeroVisual() {
         </span>
       </motion.a>
 
-      <motion.div className="float float--pipeline" style={{ x: nearX, y: nearY }} {...pop(1.25)}>
-        <div className="glass float-card">
-          <p className="label">Pipeline tracked</p>
-          <p className="float-card__value">
-            AED 15M<span>+</span>
-          </p>
-          <Sparkline />
-        </div>
-      </motion.div>
-
-      <motion.div className="float float--turnaround" style={{ x: farX, y: farY }} {...pop(1.4)}>
-        <div className="glass float-card float-card--delay">
-          <p className="label">Reporting time</p>
-          <p className="float-card__value">
-            −70<span>%</span>
-          </p>
-          <Bars />
-        </div>
-      </motion.div>
-
       <motion.div className="float float--badge" style={{ x: nearX, y: nearY }} {...pop(1.55)}>
         <div className="glass float-chip">
           <span className="float-chip__icon" aria-hidden="true">
@@ -266,57 +241,5 @@ function HeroVisual() {
         </div>
       </motion.div>
     </motion.div>
-  );
-}
-
-function Sparkline() {
-  const line = 'M2 34 C 14 30, 20 32, 30 26 S 48 28, 58 20 S 76 22, 86 14 S 104 12, 118 5';
-  return (
-    <svg className="sparkline" viewBox="0 0 120 40" aria-hidden="true">
-      <defs>
-        <linearGradient id="spark-fill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" style={{ stopColor: 'var(--spark-a)', stopOpacity: 0.45 }} />
-          <stop offset="1" style={{ stopColor: 'var(--spark-a)', stopOpacity: 0 }} />
-        </linearGradient>
-        <linearGradient id="spark-line" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0" style={{ stopColor: 'var(--spark-a)' }} />
-          <stop offset="1" style={{ stopColor: 'var(--spark-b)' }} />
-        </linearGradient>
-      </defs>
-      <motion.path
-        d={`${line} L118 40 L2 40 Z`}
-        fill="url(#spark-fill)"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.2, duration: 1 }}
-      />
-      <motion.path
-        d={line}
-        fill="none"
-        stroke="url(#spark-line)"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ delay: 1.5, duration: 1.6, ease: EASE }}
-      />
-    </svg>
-  );
-}
-
-function Bars() {
-  const heights = [100, 84, 70, 52, 40, 30];
-  return (
-    <div className="bars" aria-hidden="true">
-      {heights.map((h, i) => (
-        <motion.span
-          key={i}
-          style={{ height: `${h}%` }}
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 1 }}
-          transition={{ delay: 1.7 + i * 0.08, duration: 0.8, ease: EASE }}
-        />
-      ))}
-    </div>
   );
 }

@@ -24,28 +24,7 @@ import {
 import { FaPython } from 'react-icons/fa6';
 import { TbBrandAzure, TbSql, TbTopologyStar3 } from 'react-icons/tb';
 
-export const profile = {
-  name: 'Karthick Raja',
-  firstName: 'Karthick',
-  lastName: 'Raja',
-  role: 'Data Analyst & Power BI Developer',
-  location: 'Dubai, UAE',
-  locationLong: 'Dubai, United Arab Emirates',
-  availability: 'Available immediately · UAE Visit Visa',
-  email: 'karthickraja232205@gmail.com',
-  phone: '+971 50 256 7444',
-  phoneHref: 'tel:+971502567444',
-  linkedin: 'https://www.linkedin.com/in/karthick-raja-l-7a5b3a26b/',
-  linkedinHandle: '/in/karthick-raja',
-  linkedinCerts: 'https://www.linkedin.com/in/karthick-raja-l-7a5b3a26b/details/certifications/',
-  github: 'https://github.com/KarthickRaja46',
-  whatsapp:
-    'https://wa.me/971502567444?text=Hi%20Karthick,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect.',
-  resume: '/assets/KARTHICK_RAJA_Data_Analyst.pdf',
-  resumeFileName: 'Karthick_Raja_Data_Analyst_Resume.pdf',
-  portrait: '/assets/karthick-raja-portrait.webp',
-  portraitAlt: 'Portrait of Karthick Raja, Data Analyst and Power BI Developer',
-};
+export { profile } from './profile';
 
 export const navLinks = [
   { id: 'about', label: 'About' },
@@ -65,7 +44,7 @@ export const hero = {
     'ETL Automation & Business Analytics',
   ],
   tagline:
-    'Data Analyst & Power BI Developer with 1.5+ years of experience in **SQL, Power BI, DAX, Power Query, Azure, Excel, and data modeling**. I build KPI dashboards, executive reports, and BI solutions across **sales, banking, and supply chain**.',
+    'Data Analyst & Power BI Developer with 1.5+ years of hands-on experience in **SQL, Power BI, DAX, Power Query, Excel, and data modeling**. I build KPI dashboards, executive reports, and BI solutions across **sales, banking, real estate, and supply chain**.',
   stats: [
     { value: 1.5, decimals: 1, suffix: '+', label: 'Years experience' },
     { prefix: 'AED ', value: 15, suffix: 'M+', label: 'Pipeline tracked' },
@@ -98,7 +77,7 @@ export const about = {
     { label: 'Name', value: 'Karthick Raja' },
     { label: 'Role', value: 'Data Analyst & Power BI Developer' },
     { label: 'Status', value: 'Open to Full-Time Roles' },
-    { label: 'Location', value: 'Dubai, UAE (Available Immediately / UAE Visit Visa)' },
+    { label: 'Location', value: 'Dubai, UAE (Available Immediately)' },
     { label: 'Education', value: 'B.E. Computer Science & Engineering' },
     { label: 'Languages', value: 'English, Tamil, Malayalam' },
     { label: 'Focus', value: 'Business Intelligence, Semantic Modeling & Automation' },
@@ -118,12 +97,39 @@ export const about = {
 
 export const levelLabels = { 3: 'Advanced', 2: 'Strong', 1: 'Working Knowledge' };
 
+// chart: the decorative mini-visual drawn in each tile ('bars' | 'donut' | 'line' | 'gauge')
 export const stats = [
-  { value: 8, suffix: '+', label: 'Analytical projects' },
-  { value: 6, suffix: '+', label: 'Certifications' },
-  { value: 800, suffix: 'K+', label: 'Records analyzed', duration: 2.6 },
-  { value: 12, suffix: '+', label: 'Hours saved weekly' },
+  { value: 8, label: 'Live BI projects', chart: 'bars' },
+  { value: 6, label: 'Certifications & courses', chart: 'donut' },
+  { value: 800, suffix: 'K+', label: 'Records analyzed', duration: 2.6, chart: 'line' },
+  { value: 12, suffix: '+', label: 'Hours saved weekly', chart: 'gauge' },
 ];
+
+// "How I work" strip, shown under the stats.
+export const process = {
+  eyebrow: 'How I work',
+  title: 'From question to *dashboard*',
+  steps: [
+    {
+      title: 'Requirements',
+      text: 'Sit with the people who will use the report, pin down the decisions it must support, and agree KPI definitions before touching data.',
+    },
+    {
+      title: 'Model',
+      text: 'Clean and shape the data with SQL and Power Query, then build a star schema and DAX measures that stay fast as volumes grow.',
+    },
+    {
+      title: 'Validate',
+      text: 'Reconcile totals against the source, test edge cases, and walk through every KPI with the owner of the numbers.',
+    },
+    {
+      title: 'Ship',
+      text: 'Publish with scheduled refresh and row-level security, then keep improving it from real usage and feedback.',
+    },
+  ],
+  toolsLabel: 'Tools I use daily',
+  tools: ['Power BI Desktop & Service', 'DAX', 'Power Query (M)', 'SQL Server / MySQL', 'Excel & Power Pivot', 'Python (Pandas)', 'Git'],
+};
 
 export const experience = {
   eyebrow: 'Experience',
@@ -174,6 +180,9 @@ export const experience = {
       location: 'Dubai, UAE',
       mode: 'Remote',
       title: 'Power BI Developer (Freelance)',
+      // Fill in with a real quote from Enjay to show it under this role, e.g.
+      // { quote: '…', name: 'Full Name', role: 'Sales Manager, Enjay Engineering' }
+      testimonial: null,
       groups: [
         {
           title: 'Commercial Pipeline & Stakeholder Collaboration',
@@ -217,94 +226,132 @@ export const experience = {
   ],
 };
 
+const pbi = (key) => `https://app.powerbi.com/view?r=${key}`;
+const repo = (name) => `https://github.com/KarthickRaja46/${name}`;
+
+// Each project: live Power BI link, GitHub repo, and a PDF export of the report pages.
 export const projects = {
   eyebrow: 'Selected work',
   title: 'Selected *projects*',
   subtitle:
-    'A collection of interactive Power BI dashboards, ETL pipelines, and data applications delivering measurable business value.',
+    'Interactive Power BI reports you can open and click through, each with its source on GitHub and a PDF of every page.',
   featured: [
     {
-      title: 'Steel Quotation & Sales Analytics',
-      category: 'Sales & Commercial Analytics',
+      title: 'UAE Real Estate Analytics',
+      category: 'Real Estate · UAE',
       description:
-        'Automated reporting workflows saving 12+ hours weekly and tracked AED 15M+ in commercial pipeline opportunities across UAE emirates with a 5-page interactive Power BI dashboard.',
-      tags: ['Power BI', 'DAX', 'SQL', 'Power Query', 'Star Schema'],
-      url: 'https://app.powerbi.com/view?r=eyJrIjoiMWQxMzFjYTAtZjkxMi00YzViLTg2NTktMGI5Y2YzNWRkNDBkIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9',
-      image: '/assets/steel_quotation_thumbnail.webp',
-      width: 1376,
-      height: 768,
-      alt: 'Steel Quotation and Sales Analytics Power BI dashboard preview',
+        '8,000 property listings across all seven emirates: AED 3bn in sales, AED 311M in broker commission, rental occupancy and days on market, and a leaderboard of 18 brokerages over 4 report pages.',
+      tags: ['Power BI', 'DAX', 'Power Query', 'Geo Analytics'],
+      url: pbi('eyJrIjoiYWI1YjViZTQtNTg3Zi00MmYwLThkMDAtYmY0YTFjNzU4MzEyIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9'),
+      github: repo('UAE-Real-Estate-Analytics-PowerBI'),
+      pdf: '/assets/projects/uae-real-estate.pdf',
+      image: '/assets/projects/uae-real-estate.webp',
+      width: 1280,
+      height: 811,
+      alt: 'UAE Real Estate Analytics Power BI dashboard: commission, properties closed and listings by emirate',
     },
     {
-      title: 'Business Performance & Customer Analytics',
-      category: 'Customer Analytics',
+      title: 'Steel Quotation & Sales Analytics',
+      category: 'Client Project · Enjay Engineering',
       description:
-        'Analyzed $2.3M revenue and $286K profit across 9,994 orders, identifying customer retention patterns, cohort metrics, and YTD performance trends.',
-      tags: ['Power BI', 'DAX', 'Star Schema', 'Azure'],
-      url: 'https://app.powerbi.com/view?r=eyJrIjoiNjRlMTgyYmYtYjBjOC00ZGUzLTlmMjMtYzY3NTBiMDcyMGZiIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9',
-      image: '/assets/biz_performance_thumbnail.webp',
-      width: 1024,
-      height: 1024,
-      alt: 'Business Performance and Customer Analytics Power BI dashboard preview',
+        '5-page commercial dashboard for a UAE steel supplier: AED 15M+ in active pipeline tracked, 30+ DAX measures covering quotation aging, win rate and emirate-level demand, and 12+ hours of weekly manual reporting eliminated.',
+      tags: ['Power BI', 'DAX', 'SQL', 'Power Query', 'Star Schema', 'RLS'],
+      // No public link — client data. The image below is a branded summary card.
+      url: null,
+      github: null,
+      pdf: null,
+      note: 'Client project · dashboard not publicly available',
+      image: '/assets/projects/steel-quotation.webp',
+      width: 1280,
+      height: 730,
+      alt: 'Steel Quotation & Sales Analytics — branded summary card showing AED 15M+ pipeline, 12h+ saved weekly, 5-page report and 30+ DAX measures',
     },
     {
       title: 'Banking Performance Dashboard',
       category: 'Financial Analytics',
       description:
-        'Analyzed ₹4.87B in transaction value across 150K+ records, identifying high-failure transaction segments and risk factors with SQL validation and Power Query ETL.',
-      tags: ['Power BI', 'SQL', 'Financial Analytics', 'Power Query'],
-      url: 'https://app.powerbi.com/view?r=eyJrIjoiMjg1MTcwZjktZTViMy00OTU3LTgyMTctNGIzNTRhNWYwYWM1IiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9',
-      image: '/assets/banking_analytics_thumbnail.webp',
-      width: 1024,
-      height: 1024,
-      alt: 'Banking Performance Power BI dashboard preview',
+        '₹4.87B in transaction value across 150K transactions, with fee and tax tracking, state-wise revenue, customer segments and success-versus-failed transaction analysis.',
+      tags: ['Power BI', 'SQL', 'Power Query', 'DAX'],
+      url: pbi('eyJrIjoiM2E0ZTNiMTEtYWMwNS00NWE4LWE2ODMtZDhlZmYwYzdjNzE2IiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9'),
+      github: repo('Banking-Performance-Analytics'),
+      pdf: '/assets/projects/banking-performance.pdf',
+      image: '/assets/projects/banking-performance.webp',
+      width: 1280,
+      height: 700,
+      alt: 'Banking Performance Power BI dashboard: transaction amount, fees and tax overview',
     },
     {
       title: 'VOLT IQ – Industrial IoT Platform',
       category: 'Industrial IoT',
       description:
-        'Analyzed 50,000+ IoT telemetry records across 10 industrial machines to monitor machine health, evaluate downtime risk, and detect vibration anomalies in real-time.',
-      tags: ['Power BI', 'DAX', 'IoT Analytics', 'Anomaly Detection'],
-      url: 'https://app.powerbi.com/view?r=eyJrIjoiZTNjNzZiNGItYjM3Zi00NDNjLWFhODMtNjNiZjlkMWI4NjQ4IiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9&pageName=fd208009e45a735db3b9',
-      image: '/assets/voltiq_iot_thumbnail.webp',
-      width: 1024,
-      height: 1024,
-      alt: 'VOLT IQ Industrial IoT Machine Intelligence Power BI dashboard preview',
+        '100K+ sensor readings from 50 machines turned into a 6-page operations report: 8,766 anomalies flagged, predictive maintenance, energy use and sensor data quality.',
+      tags: ['Power BI', 'DAX', 'Power Query', 'IoT Analytics'],
+      url: pbi('eyJrIjoiMjI0MDdhOTYtMmJmZi00YjM5LWIwZGQtZGIyNjhhOWZmZTFkIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9'),
+      github: repo('VOLT-IQ-Industrial-IoT-Analytics'),
+      pdf: '/assets/projects/volt-iq.pdf',
+      image: '/assets/projects/volt-iq.webp',
+      width: 1280,
+      height: 798,
+      alt: 'VOLT IQ Industrial IoT Power BI dashboard: machine status, energy and anomaly overview',
+    },
+    {
+      title: 'Business Performance & Customer Analytics',
+      category: 'Subscription & Revenue',
+      description:
+        '5-page subscription billing report: 7.77M revenue, 92.3% collection rate, 421K MRR and 7.97% churn, broken down by customer segment, industry, usage and outstanding invoices.',
+      tags: ['Power BI', 'DAX', 'Power Query', 'Star Schema'],
+      url: pbi('eyJrIjoiMWI4YjFjODQtOTBkOS00ZmM2LWI0NTgtNmM0NmQ1ZTAxYWFiIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9'),
+      github: repo('Business-Performance-Customer-Intelligence'),
+      pdf: '/assets/projects/business-performance.pdf',
+      image: '/assets/projects/business-performance.webp',
+      width: 1280,
+      height: 731,
+      alt: 'Business Performance Power BI dashboard: revenue, collections, MRR and subscriptions overview',
     },
   ],
   more: {
-    eyebrow: 'Technical Portfolio',
-    title: 'Additional Completed Projects',
-    subtitle:
-      'Specialized analytical solutions spanning healthcare claim modeling, API telemetry, retail pipelines, and NLP automation.',
+    eyebrow: 'More work',
+    title: 'Additional projects',
+    subtitle: 'More live reports across healthcare, API monitoring, retail and lending.',
     items: [
       {
-        badge: 'Healthcare Analytics · Simulated',
+        badge: 'Healthcare Analytics',
         title: 'ClaimVision – Healthcare Claims Analytics',
         description:
-          'Modeled 120,000+ insurance claims across a 4-page Power BI dashboard with 25+ DAX measures diagnosing claim denial patterns, settlement cycles, and reimbursement velocities.',
-        tags: ['Power BI', 'DAX', 'SQL', 'Healthcare KPIs'],
+          '20K insurance claims across 1,000 providers: claim value by service and specialty, patient demographics, provider efficiency, and 5,011 claims (24.9%) flagged as high fraud risk.',
+        tags: ['Power BI', 'DAX', 'Power Query', 'Healthcare KPIs'],
+        url: pbi('eyJrIjoiMWQxMzFjYTAtZjkxMi00YzViLTg2NTktMGI5Y2YzNWRkNDBkIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9'),
+        github: repo('ClaimVision-Healthcare-Analytics'),
+        pdf: '/assets/projects/claimvision.pdf',
       },
       {
-        badge: 'Web Telemetry · Simulated',
+        badge: 'API Monitoring · Python',
         title: 'API Performance Monitoring System',
         description:
-          'Processed 100,000+ simulated API request logs to benchmark latency percentiles (p95/p99), throughput, HTTP status errors, and SLA compliance using Python, SQL, and Power BI.',
-        tags: ['Python', 'SQL', 'Power BI', 'SLA Analytics'],
+          '559K API requests across 11 endpoints: success, error and SLA-breach rates, hourly latency bottlenecks and a system health score, fed by a Python and MySQL ETL pipeline.',
+        tags: ['Python', 'MySQL', 'Power BI', 'DAX'],
+        url: pbi('eyJrIjoiZmNmMzFhZTAtYWZiZS00OWQyLWEyMDgtYjllNTJkM2FmMTgzIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9'),
+        github: repo('API-Performance-Monitoring-Analytics'),
+        pdf: '/assets/projects/api-monitoring.pdf',
       },
       {
-        badge: 'Enterprise Analytics · Besant',
-        title: 'Retail & Supply Chain Reporting Suite',
+        badge: 'Retail Analytics',
+        title: 'Retail Analytics & Profit Insights',
         description:
-          'Designed end-to-end reporting solutions analyzing 500K+ transactional records, tracking customer churn indicators, delivery lead times, and fulfillment bottlenecks.',
-        tags: ['Power BI', 'SQL', 'ETL Gateways', 'Supply Chain'],
+          '$798K in sales and $78K profit (9.8% margin) over 2014–2017, broken down by category, city and sales manager to find loss-making products and top customers.',
+        tags: ['Power BI', 'DAX', 'Power Query', 'Star Schema'],
+        url: pbi('eyJrIjoiZWRiMTkxYTYtOGRhZS00NTRiLTg4MTgtMGI4MjcyMDhiMjgzIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9'),
+        github: repo('Retail-Analytics-Profit-Insights'),
+        pdf: '/assets/projects/retail-profit.pdf',
       },
       {
-        badge: 'NLP Automation · Python',
-        title: 'ATS Resume Analyzer & Job Matcher',
+        badge: 'Lending & Risk',
+        title: 'Loan Analytics & Risk Management',
         description:
-          'Developed a Python text-processing tool parsing candidate resumes against job descriptions to extract keywords, calculate semantic match percentages, and highlight skill gaps.',
-        tags: ['Python', 'NLP', 'Text Analytics'],
+          '20K loan applications worth 498M, analysed by credit score, employment, education, home ownership and loan purpose to show approval patterns and flag high-risk applicants.',
+        tags: ['Power BI', 'DAX', 'Power Query', 'Risk Analytics'],
+        url: pbi('eyJrIjoiMzkxYzQ5ZGUtYTQ2ZC00MWFlLWIxNzAtOWZlMDU0MjMzMzFlIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9'),
+        pdf: '/assets/projects/loan-risk.pdf',
       },
     ],
   },
@@ -382,64 +429,59 @@ export const education = {
       period: '2022 – 2026',
       degree: 'Bachelor of Engineering in Computer Science & Engineering',
       school: 'Hindusthan Institute of Technology, Coimbatore, Tamil Nadu, India',
-      details: ['Focus: Business Intelligence & Data Engineering', 'Medium: English'],
+      // Add your CGPA here once final, e.g. 'CGPA: 8.1 / 10'
+      details: ['Medium: English'],
     },
     {
       period: '2020 – 2022',
       degree: 'Higher Secondary Certificate (HSC)',
       school: 'Sri Ramakrishna Matric Hr Sec School, Perambalur, Tamil Nadu, India',
-      details: ['Stream: Computer Science', 'Grade: 76.3%', 'Medium: English'],
-    },
-    {
-      period: '2012 – 2020',
-      degree: 'Secondary School Leaving Certificate (SSLC)',
-      school: "St. Paul's Matric Hr Sec School, Tamil Nadu, India",
-      details: ['Grade: 92%', 'Medium: English'],
+      details: ['Stream: Computer Science'],
     },
   ],
 };
 
+// Only the first two are exam-based certifications; the rest are course certificates.
 export const certifications = {
   eyebrow: 'Credentials',
-  title: 'Professional *certifications*',
-  subtitle:
-    'Industry-recognized credentials verifying expertise in Power BI, SQL, cloud infrastructure, and data analytics.',
+  title: 'Certifications & *courses*',
+  subtitle: 'Microsoft certifications backed by course certificates in BI, analytics and generative AI.',
   items: [
     {
       issuer: 'Microsoft',
-      title: 'Microsoft Certified: Power BI Data Analyst',
-      sub: 'Microsoft Certified Associate',
+      title: 'Microsoft Certified: Power BI Data Analyst Associate',
+      sub: 'Microsoft Certification',
       credential: 'ID: TYPPUPQXZ0T8',
+    },
+    {
+      issuer: 'Microsoft',
+      title: 'Microsoft Certified: Azure Fundamentals',
+      sub: 'Microsoft Certification',
+      credential: 'Microsoft Learn',
     },
     {
       issuer: 'Google',
       title: 'Google Business Intelligence',
-      sub: 'Professional Certificate',
-      credential: 'Google Certified',
-    },
-    {
-      issuer: 'Microsoft',
-      title: 'Microsoft Azure Fundamentals (AZ‑900)',
-      sub: 'Cloud & Data Infrastructure',
-      credential: 'Microsoft Certified',
+      sub: 'Professional Certificate · Coursera',
+      credential: 'Course certificate',
     },
     {
       issuer: 'IBM',
       title: 'Generative AI for Data Analysts',
-      sub: 'IBM Certified',
+      sub: 'Specialization · Coursera',
       credential: 'ID: Q5AF9GPDM2LU',
     },
     {
       issuer: 'Microsoft',
       title: 'Harnessing the Power of Data with Power BI',
-      sub: 'Microsoft Certified',
+      sub: 'Course certificate · Coursera',
       credential: 'ID: FHTK7PQTG40Z',
     },
     {
       issuer: 'Microsoft & LinkedIn',
       title: 'Career Essentials in Data Analysis',
-      sub: 'Professional Certificate',
-      credential: 'Verified Credential',
+      sub: 'Professional Certificate · LinkedIn Learning',
+      credential: 'Course certificate',
     },
   ],
 };

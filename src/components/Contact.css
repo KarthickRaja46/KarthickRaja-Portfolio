@@ -269,3 +269,8 @@ a.channel:hover .channel__arrow {
     grid-template-columns: 1fr;
   }
 }
+
+.form__submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}

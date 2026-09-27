@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { LuArrowUpRight } from 'react-icons/lu';
+import { LuArrowUpRight, LuFileText } from 'react-icons/lu';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa6';
 import { profile, projects } from '../data/content';
 import { trackSpotlight } from '../lib/hooks';
@@ -45,6 +45,7 @@ export default function Projects() {
                   <p className="more-work__badge">{item.badge}</p>
                   <h4 className="more-work__title">{item.title}</h4>
                   <p className="more-work__desc">{item.description}</p>
+                  <ProjectLinks project={item} withLive />
                 </div>
                 <ul className="tags more-work__tags" aria-label="Technologies">
                   {item.tags.map((tag) => (
@@ -59,11 +60,11 @@ export default function Projects() {
         </div>
 
         <Reveal className="projects__cta">
-          <a href={profile.linkedin} className="btn btn--gold" target="_blank" rel="noopener noreferrer">
-            <FaLinkedinIn aria-hidden="true" /> View all projects on LinkedIn
+          <a href={profile.github} className="btn btn--gold" target="_blank" rel="noopener noreferrer">
+            <FaGithub aria-hidden="true" /> See all projects on GitHub
           </a>
-          <a href={profile.github} className="btn btn--glass" target="_blank" rel="noopener noreferrer">
-            <FaGithub aria-hidden="true" /> Explore GitHub profile
+          <a href={profile.linkedin} className="btn btn--glass" target="_blank" rel="noopener noreferrer">
+            <FaLinkedinIn aria-hidden="true" /> Connect on LinkedIn
           </a>
         </Reveal>
       </div>
@@ -92,9 +93,16 @@ function ProjectCard({ project, index, wide = false, delay = 0 }) {
             loading="lazy"
             decoding="async"
           />
-          <span className="pcard__open" aria-hidden="true">
-            Open live dashboard <LuArrowUpRight />
-          </span>
+          {project.url && (
+            <span className="pcard__open" aria-hidden="true">
+              Open live dashboard <LuArrowUpRight />
+            </span>
+          )}
+          {!project.url && project.note && (
+            <span className="pcard__open pcard__open--muted" aria-hidden="true">
+              {project.note}
+            </span>
+          )}
         </div>
 
         <div className="pcard__body">
@@ -103,9 +111,13 @@ function ProjectCard({ project, index, wide = false, delay = 0 }) {
             {project.category}
           </p>
           <h3 className="pcard__title">
-            <a href={project.url} target="_blank" rel="noopener noreferrer" className="pcard__link">
-              {project.title}
-            </a>
+            {project.url ? (
+              <a href={project.url} target="_blank" rel="noopener noreferrer" className="pcard__link">
+                {project.title}
+              </a>
+            ) : (
+              project.title
+            )}
           </h3>
           <p className="pcard__desc">{project.description}</p>
           <ul className="tags" aria-label="Technologies">
@@ -115,11 +127,32 @@ function ProjectCard({ project, index, wide = false, delay = 0 }) {
               </li>
             ))}
           </ul>
-          <span className="link-arrow pcard__cta" aria-hidden="true">
-            Live dashboard <LuArrowUpRight />
-          </span>
+          <ProjectLinks project={project} withLive />
         </div>
       </motion.div>
     </Reveal>
+  );
+}
+
+/* Live / GitHub / PDF links; they sit above a card's stretched title link. */
+function ProjectLinks({ project, withLive = false }) {
+  const links = [
+    withLive && project.url && { href: project.url, label: 'Live dashboard', icon: LuArrowUpRight },
+    project.github && { href: project.github, label: 'GitHub', icon: FaGithub },
+    project.pdf && { href: project.pdf, label: 'PDF report', icon: LuFileText },
+  ].filter(Boolean);
+
+  if (!links.length) return project.note ? <p className="project-links__note">{project.note}</p> : null;
+
+  return (
+    <ul className="project-links" aria-label={`${project.title} links`}>
+      {links.map(({ href, label, icon: Icon }) => (
+        <li key={label}>
+          <a href={href} className="project-links__link" target="_blank" rel="noopener noreferrer">
+            <Icon aria-hidden="true" /> {label}
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }

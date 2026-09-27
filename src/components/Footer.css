@@ -106,7 +106,8 @@
   text-align: center;
   white-space: nowrap;
   color: transparent;
-  background: var(--grad-wordmark);
+  /* A gold light follows the pointer across the letters. */
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 40%), var(--gold) 0%, transparent 55%), var(--grad-wordmark);
   -webkit-background-clip: text;
   background-clip: text;
   user-select: none;

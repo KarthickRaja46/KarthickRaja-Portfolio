@@ -4,6 +4,7 @@ import { LuDownload, LuMenu, LuX } from 'react-icons/lu';
 import { navLinks, profile } from '../data/content';
 import { useActiveSection, useScrolledPast } from '../lib/hooks';
 import { setScrollLocked } from '../lib/smoothScroll';
+import { useIntroDone } from '../lib/intro';
 import ThemeToggle from './ThemeToggle';
 import { EASE } from './ui/Reveal';
 import './Navbar.css';
@@ -14,6 +15,7 @@ export default function Navbar() {
   const active = useActiveSection(sectionIds);
   const scrolled = useScrolledPast(24);
   const [open, setOpen] = useState(false);
+  const ready = useIntroDone();
 
   useEffect(() => {
     if (!open) return;
@@ -36,7 +38,7 @@ export default function Navbar() {
       <motion.div
         className="nav__bar"
         initial={{ y: -24, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={ready ? { y: 0, opacity: 1 } : undefined}
         transition={{ duration: 0.9, ease: EASE, delay: 0.1 }}
       >
         <a href="#home" className="nav__brand" aria-label={`${profile.name} — back to top`}>

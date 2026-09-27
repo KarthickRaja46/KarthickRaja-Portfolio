@@ -1,6 +1,7 @@
 import { LuArrowUp, LuMail, LuQuote } from 'react-icons/lu';
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa6';
 import { profile, quote } from '../data/content';
+import { trackSpotlight } from '../lib/hooks';
 import Reveal from './ui/Reveal';
 import './Footer.css';
 
@@ -50,7 +51,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <p className="footer__wordmark" aria-hidden="true">
+      <p className="footer__wordmark" aria-hidden="true" onPointerMove={trackSpotlight}>
         {profile.name}
       </p>
     </footer>

@@ -17,6 +17,17 @@
   align-items: flex-start;
   gap: 0.75rem;
   padding: clamp(1.4rem, 2.6vw, 2rem);
+  padding-top: calc(clamp(1.4rem, 2.6vw, 2rem) + 3.4rem);
+}
+
+.stat-chart {
+  position: absolute;
+  top: clamp(1.1rem, 2.2vw, 1.6rem);
+  right: clamp(1.1rem, 2.2vw, 1.6rem);
+  width: 72px;
+  height: 44px;
+  overflow: visible;
+  filter: drop-shadow(0 4px 12px rgba(245, 196, 81, 0.35));
 }
 
 .stats__item:hover {

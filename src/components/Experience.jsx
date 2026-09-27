@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useSpring } from 'motion/react';
-import { LuMapPin } from 'react-icons/lu';
+import { LuMapPin, LuQuote } from 'react-icons/lu';
 import { experience } from '../data/content';
 import { trackSpotlight } from '../lib/hooks';
 import Reveal from './ui/Reveal';
@@ -53,6 +53,18 @@ export default function Experience() {
                     </ul>
                   </div>
                 ))}
+                {role.testimonial && (
+                  <figure className="role__quote">
+                    <LuQuote className="role__quote-icon" aria-hidden="true" />
+                    <blockquote>
+                      <p>{role.testimonial.quote}</p>
+                    </blockquote>
+                    <figcaption>
+                      {role.testimonial.name}
+                      <span>{role.testimonial.role}</span>
+                    </figcaption>
+                  </figure>
+                )}
                 <ul className="tags role__stack" aria-label="Key technologies">
                   {role.stack.map((tech) => (
                     <li className="tag" key={tech}>
