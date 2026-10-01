@@ -179,7 +179,7 @@ export const experience = {
       company: 'Enjay Engineering Services',
       location: 'Dubai, UAE',
       mode: 'Remote',
-      title: 'Power BI Developer (Freelance)',
+      title: 'Power BI Developer (Contract)',
       // Fill in with a real quote from Enjay to show it under this role, e.g.
       // { quote: '…', name: 'Full Name', role: 'Sales Manager, Enjay Engineering' }
       testimonial: null,
