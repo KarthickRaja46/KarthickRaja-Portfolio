@@ -21,6 +21,6 @@ export const profile = {
     'https://wa.me/971502567444?text=Hi%20Karthick,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect.',
   resume: '/assets/KARTHICK_RAJA_Data_Analyst.pdf',
   resumeFileName: 'Karthick_Raja_Data_Analyst_Resume.pdf',
-  portrait: '/assets/karthick-raja-headshot.webp',
+  portrait: '/assets/karthick-raja-portfolio.webp',
   portraitAlt: 'Portrait of Karthick Raja, Data Analyst and Power BI Developer',
 };

@@ -203,7 +203,7 @@ function HeroVisual() {
       <motion.div className="glass portrait" style={{ rotateX, rotateY }}>
         <span className="beam" aria-hidden="true" />
         <div className="portrait__frame">
-          <img src={profile.portrait} alt={profile.portraitAlt} width="789" height="984" fetchPriority="high" />
+          <img src={profile.portrait} alt={profile.portraitAlt} width="800" height="1000" fetchPriority="high" />
           <motion.span
             className="portrait__glare"
             aria-hidden="true"
