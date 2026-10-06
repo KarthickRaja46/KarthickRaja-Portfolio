@@ -10,7 +10,7 @@
   [![Portfolio](https://img.shields.io/badge/Live_Portfolio-Website-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://karthickraja.page/)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-Karthick_Raja-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karthick-raja-l-7a5b3a26b/)
   [![GitHub](https://img.shields.io/badge/GitHub-KarthickRaja46-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/KarthickRaja46)
-  [![Email](https://img.shields.io/badge/Email-karthickraja232205%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:karthickraja232205@gmail.com)
+  [![Career Email](https://img.shields.io/badge/Career_Email-karthickrajacareer46%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:karthickrajacareer46@gmail.com)
 
   ---
 
@@ -151,7 +151,8 @@ Built with **React + Vite**, **Motion** for animation and **Lenis** for smooth s
 - 🌐 **Portfolio Website:** [https://karthickraja.page](https://karthickraja.page)
 - 💼 **LinkedIn:** [Karthick Raja](https://www.linkedin.com/in/karthick-raja-l-7a5b3a26b/)
 - 🐙 **GitHub:** [KarthickRaja46](https://github.com/KarthickRaja46)
-- ✉️ **Email:** [karthickraja232205@gmail.com](mailto:karthickraja232205@gmail.com)
+- 💼 **Career Email:** [karthickrajacareer46@gmail.com](mailto:karthickrajacareer46@gmail.com)
+- ✉️ **Personal Email:** [karthickraja232205@gmail.com](mailto:karthickraja232205@gmail.com)
 - 📱 **Phone / WhatsApp:** [+971 50 256 7444](https://wa.me/971502567444)
 - 📍 **Location:** Dubai, United Arab Emirates *(Available Immediately)*
 

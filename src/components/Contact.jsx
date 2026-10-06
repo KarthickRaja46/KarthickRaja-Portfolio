@@ -13,7 +13,13 @@ const FORM_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
 const channels = [
   { icon: LuMapPin, label: 'Location', value: profile.locationLong },
   { icon: LuPhone, label: 'Phone', value: profile.phone, href: profile.phoneHref },
-  { icon: LuMail, label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
+  { icon: LuMail, label: 'Career email', value: profile.email, href: `mailto:${profile.email}` },
+  {
+    icon: LuMail,
+    label: 'Personal email',
+    value: profile.personalEmail,
+    href: `mailto:${profile.personalEmail}`,
+  },
   { icon: FaLinkedinIn, label: 'LinkedIn', value: profile.linkedinHandle, href: profile.linkedin, external: true },
   { icon: FaWhatsapp, label: 'WhatsApp', value: 'Chat on WhatsApp', href: profile.whatsapp, external: true },
   { icon: FaGithub, label: 'GitHub', value: 'KarthickRaja46', href: profile.github, external: true },
@@ -93,6 +99,10 @@ ${field('message')}`;
           <Reveal className="contact__email" delay={0.15}>
             <a href={`mailto:${profile.email}`} className="contact__email-link">
               {profile.email}
+              <LuArrowUpRight aria-hidden="true" />
+            </a>
+            <a href={`mailto:${profile.personalEmail}`} className="contact__email-link">
+              {profile.personalEmail}
               <LuArrowUpRight aria-hidden="true" />
             </a>
             <button
