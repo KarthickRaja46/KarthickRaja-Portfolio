@@ -14,7 +14,6 @@ import {
   LuFileSpreadsheet,
   LuFilter,
   LuLaptop,
-  LuLayers,
   LuPresentation,
   LuShieldCheck,
   LuSigma,
@@ -22,6 +21,7 @@ import {
   LuZap,
 } from 'react-icons/lu';
 import { FaPython } from 'react-icons/fa6';
+import { SiSnowflake } from 'react-icons/si';
 import { TbBrandAzure, TbSql, TbTopologyStar3 } from 'react-icons/tb';
 
 export { profile } from './profile';
@@ -44,9 +44,9 @@ export const hero = {
     'ETL Automation & Business Analytics',
   ],
   tagline:
-    'Data Analyst & Power BI Developer with 1.5+ years of hands-on experience in **SQL, Power BI, DAX, Power Query, Excel, and data modeling**. I build KPI dashboards, executive reports, and BI solutions across **sales, banking, real estate, and supply chain**.',
+    'BI Analyst & Data Analyst with 1+ year of hands-on experience in **SQL, Power BI, DAX, Power Query, Excel, and data modeling**. I build KPI dashboards, executive reports, and BI solutions across **sales, banking, real estate, and supply chain**.',
   stats: [
-    { value: 1.5, decimals: 1, suffix: '+', label: 'Years experience' },
+    { value: 1, suffix: '+', label: 'Years experience' },
     { prefix: 'AED ', value: 15, suffix: 'M+', label: 'Pipeline tracked' },
     { value: 70, suffix: '%', label: 'Faster reporting' },
   ],
@@ -58,8 +58,8 @@ export const marquee = [
   { label: 'SQL', icon: TbSql },
   { label: 'DAX', icon: LuSigma },
   { label: 'Power Query', icon: LuFilter },
-  { label: 'Microsoft Fabric', icon: LuLayers },
   { label: 'Azure', icon: TbBrandAzure },
+  { label: 'Snowflake', icon: SiSnowflake },
   { label: 'Python', icon: FaPython },
   { label: 'Star Schema', icon: TbTopologyStar3 },
   { label: 'Advanced Excel', icon: LuFileSpreadsheet },
@@ -75,7 +75,7 @@ export const about = {
     'I combine analytical thinking with practical business understanding to turn complex datasets into clear, reliable reporting. My work spans data transformation, validation, semantic modeling, KPI development, and dashboard design, with a focus on making information easier for teams and decision-makers to understand and act on.',
   details: [
     { label: 'Name', value: 'Karthick Raja' },
-    { label: 'Role', value: 'Data Analyst & Power BI Developer' },
+    { label: 'Role', value: 'BI Analyst & Data Analyst' },
     { label: 'Status', value: 'Open to Full-Time Roles' },
     { label: 'Location', value: 'Dubai, UAE (Available Immediately)' },
     { label: 'Education', value: 'B.E. Computer Science & Engineering' },
@@ -85,13 +85,13 @@ export const about = {
   competenciesIntro: 'Focus areas demonstrated through projects, experience, and certifications.',
   // level: 3 = Advanced, 2 = Strong, 1 = Working Knowledge
   competencies: [
-    { icon: LuChartColumn, label: 'Power BI & Microsoft Fabric', level: 3 },
+    { icon: LuChartColumn, label: 'Power BI (Desktop & Service)', level: 3 },
     { icon: LuDatabase, label: 'SQL, CTEs & Query Optimization', level: 3 },
     { icon: LuBoxes, label: 'DAX & Star Schema Modeling', level: 3 },
     { icon: LuChartLine, label: 'Data Visualization & KPI Design', level: 3 },
     { icon: LuZap, label: 'Power Query (M) & Power BI Gateway', level: 2 },
     { icon: LuFileSpreadsheet, label: 'Advanced Excel & Power Pivot', level: 2 },
-    { icon: FaPython, label: 'Python (Pandas, NumPy) & Azure', level: 1 },
+    { icon: FaPython, label: 'Python (Pandas, NumPy), Azure & Snowflake', level: 1 },
   ],
 };
 
@@ -100,7 +100,7 @@ export const levelLabels = { 3: 'Advanced', 2: 'Strong', 1: 'Working Knowledge' 
 // chart: the decorative mini-visual drawn in each tile ('bars' | 'donut' | 'line' | 'gauge')
 export const stats = [
   { value: 8, label: 'Live BI projects', chart: 'bars' },
-  { value: 6, label: 'Certifications & courses', chart: 'donut' },
+  { value: 7, label: 'Certifications & courses', chart: 'donut' },
   { value: 800, suffix: 'K+', label: 'Records analyzed', duration: 2.6, chart: 'line' },
   { value: 12, suffix: '+', label: 'Hours saved weekly', chart: 'gauge' },
 ];
@@ -179,7 +179,7 @@ export const experience = {
       company: 'Enjay Engineering Services',
       location: 'Dubai, UAE',
       mode: 'Remote',
-      title: 'Power BI Developer (Contract)',
+      title: 'BI Analyst / Power BI Developer (Contract)',
       // Fill in with a real quote from Enjay to show it under this role, e.g.
       // { quote: '…', name: 'Full Name', role: 'Sales Manager, Enjay Engineering' }
       testimonial: null,
@@ -220,7 +220,6 @@ export const experience = {
         'Azure',
         'Star Schema',
         'Row-Level Security',
-        'Microsoft Fabric',
       ],
     },
   ],
@@ -361,20 +360,21 @@ export const skills = {
   eyebrow: 'Technical Expertise',
   title: 'Skills & *capabilities*',
   subtitle:
-    'A focused, industry-aligned skillset spanning Power BI & Fabric architecture, SQL optimization, Azure cloud pipelines, and business analysis.',
+    'A focused, industry-aligned skillset spanning Power BI architecture, SQL optimization, Azure and Snowflake cloud data, and business analysis.',
+  learning: 'Microsoft Fabric',
   groups: [
     {
       icon: LuChartPie,
-      title: 'Power BI, Fabric & Azure',
-      sub: 'Power BI · Fabric · Cloud Pipelines',
+      title: 'Power BI, Azure & Cloud Data',
+      sub: 'Power BI · Azure · Snowflake',
       description:
-        'End-to-end dashboard design, semantic modeling, DAX, Microsoft Fabric, Azure data services, and automated ETL pipelines.',
+        'End-to-end dashboard design, semantic modeling, DAX, Azure data services, Snowflake, and automated ETL pipelines.',
       items: [
         'Power BI Desktop & Service',
         'Advanced DAX Measures',
         'Semantic Model Design',
         'Power Query & M',
-        'Microsoft Fabric',
+        'Snowflake',
         'Incremental Refresh',
         'Deployment Pipelines',
         'Row-Level Security',
@@ -441,17 +441,23 @@ export const education = {
   ],
 };
 
-// Only the first two are exam-based certifications; the rest are course certificates.
+// Professional certificates and course certificates.
 export const certifications = {
   eyebrow: 'Credentials',
   title: 'Certifications & *courses*',
-  subtitle: 'Microsoft certifications backed by course certificates in BI, analytics and generative AI.',
+  subtitle: 'Professional certificates and courses in BI, analytics and generative AI from Microsoft, Google and IBM.',
   items: [
     {
       issuer: 'Microsoft',
-      title: 'Microsoft Certified: Power BI Data Analyst Associate',
-      sub: 'Microsoft Certification',
+      title: 'Microsoft Power BI Data Analyst',
+      sub: 'Professional Certificate · Coursera',
       credential: 'ID: TYPPUPQXZ0T8',
+    },
+    {
+      issuer: 'Google',
+      title: 'Google Data Analytics',
+      sub: 'Professional Certificate · Coursera',
+      credential: 'ID: AC9CYEX40XK8',
     },
     {
       issuer: 'Microsoft',

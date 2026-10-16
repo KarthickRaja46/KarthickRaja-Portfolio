@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { LuDownload, LuMenu, LuX } from 'react-icons/lu';
+import { LuChevronDown, LuDownload, LuMenu, LuX } from 'react-icons/lu';
 import { navLinks, profile } from '../data/content';
 import { useActiveSection, useScrolledPast } from '../lib/hooks';
 import { setScrollLocked } from '../lib/smoothScroll';
@@ -70,15 +70,7 @@ export default function Navbar() {
 
         <div className="nav__actions">
           <ThemeToggle />
-          <a
-            href={profile.resume}
-            className="btn btn--gold btn--sm nav__resume"
-            target="_blank"
-            rel="noopener noreferrer"
-            download={profile.resumeFileName}
-          >
-            <LuDownload aria-hidden="true" /> Resume
-          </a>
+          <ResumeMenu />
           <button
             type="button"
             className="nav__toggle"
@@ -127,19 +119,73 @@ export default function Navbar() {
               transition={{ delay: 0.45, duration: 0.6 }}
             >
               <a href={`mailto:${profile.email}`}>{profile.email}</a>
-              <a
-                href={profile.resume}
-                className="btn btn--gold"
-                target="_blank"
-                rel="noopener noreferrer"
-                download={profile.resumeFileName}
-              >
-                <LuDownload aria-hidden="true" /> Download resume
-              </a>
+              <div className="mobile-menu__cvs">
+                {profile.resumes.map((cv) => (
+                  <a
+                    key={cv.href}
+                    href={cv.href}
+                    className="btn btn--gold btn--sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download={cv.fileName}
+                  >
+                    <LuDownload aria-hidden="true" /> {cv.label}
+                  </a>
+                ))}
+              </div>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
     </header>
+  );
+}
+
+/** Desktop "Resume" button that opens a small menu with both CVs. */
+function ResumeMenu() {
+  const ref = useRef(null);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e) => !ref.current?.contains(e.target) && setOpen(false);
+    const onKey = (e) => e.key === 'Escape' && setOpen(false);
+    document.addEventListener('pointerdown', onDown);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('pointerdown', onDown);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+
+  return (
+    <div className="nav__resume" ref={ref}>
+      <button
+        type="button"
+        className="btn btn--gold btn--sm"
+        aria-expanded={open}
+        aria-controls="resume-menu"
+        onClick={() => setOpen((v) => !v)}
+      >
+        <LuDownload aria-hidden="true" /> Resume <LuChevronDown className="nav__resume-caret" aria-hidden="true" />
+      </button>
+      {open && (
+        <ul id="resume-menu" className="nav__resume-menu">
+          {profile.resumes.map((cv) => (
+            <li key={cv.href}>
+              <a
+                href={cv.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                download={cv.fileName}
+                onClick={() => setOpen(false)}
+              >
+                <LuDownload aria-hidden="true" /> {cv.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }

@@ -7,19 +7,13 @@ import Reveal from './ui/Reveal';
 import SectionHeading from './ui/SectionHeading';
 import './Contact.css';
 
-// Web3Forms access key (free, set in Vercel env). Without it the form uses mailto.
-const FORM_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
+// Sent by our own SMTP function (api/contact.js). If it is unreachable or not configured, the form opens a mailto instead.
+const CONTACT_ENDPOINT = '/api/contact';
 
 const channels = [
   { icon: LuMapPin, label: 'Location', value: profile.locationLong },
   { icon: LuPhone, label: 'Phone', value: profile.phone, href: profile.phoneHref },
-  { icon: LuMail, label: 'Career email', value: profile.email, href: `mailto:${profile.email}` },
-  {
-    icon: LuMail,
-    label: 'Personal email',
-    value: profile.personalEmail,
-    href: `mailto:${profile.personalEmail}`,
-  },
+  { icon: LuMail, label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
   { icon: FaLinkedinIn, label: 'LinkedIn', value: profile.linkedinHandle, href: profile.linkedin, external: true },
   { icon: FaWhatsapp, label: 'WhatsApp', value: 'Chat on WhatsApp', href: profile.whatsapp, external: true },
   { icon: FaGithub, label: 'GitHub', value: 'KarthickRaja46', href: profile.github, external: true },
@@ -51,8 +45,7 @@ export default function Contact() {
     const data = new FormData(form);
     const field = (key) => String(data.get(key) || '').trim();
 
-    // No form key configured: fall back to opening the visitor's mail app.
-    if (!FORM_KEY) {
+    const openMailApp = () => {
       const body = `Name: ${field('name')}
 Email: ${field('email')}
 
@@ -60,33 +53,42 @@ Message:
 ${field('message')}`;
       window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(field('subject'))}&body=${encodeURIComponent(body)}`;
       setStatus('Opening your email app with the message ready to send…');
-      return;
-    }
+    };
 
     setSending(true);
     setStatus('Sending…');
+    let res;
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      res = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          access_key: FORM_KEY,
-          subject: `Portfolio: ${field('subject')}`,
-          from_name: field('name'),
           name: field('name'),
           email: field('email'),
+          subject: field('subject'),
           message: field('message'),
           botcheck: data.get('botcheck') ? true : '',
         }),
       });
-      const json = await res.json();
-      if (!json.success) throw new Error(json.message);
+    } catch {
+      res = null;
+    }
+    setSending(false);
+
+    // Endpoint missing (local `vite` dev), not configured, or offline: use the visitor's mail app.
+    if (!res || res.status === 404 || res.status === 503) {
+      openMailApp();
+      return;
+    }
+
+    const json = await res.json().catch(() => ({}));
+    if (res.ok && json.success) {
       form.reset();
       setStatus('Thanks — your message was sent. I’ll reply by email soon.');
-    } catch {
+    } else if (res.status === 400 && json.message) {
+      setStatus(json.message);
+    } else {
       setStatus(`Sorry, that didn’t go through. Please email me directly at ${profile.email}.`);
-    } finally {
-      setSending(false);
     }
   }
 
@@ -99,10 +101,6 @@ ${field('message')}`;
           <Reveal className="contact__email" delay={0.15}>
             <a href={`mailto:${profile.email}`} className="contact__email-link">
               {profile.email}
-              <LuArrowUpRight aria-hidden="true" />
-            </a>
-            <a href={`mailto:${profile.personalEmail}`} className="contact__email-link">
-              {profile.personalEmail}
               <LuArrowUpRight aria-hidden="true" />
             </a>
             <button
@@ -179,13 +177,10 @@ ${field('message')}`;
                 <textarea name="message" rows="4" placeholder="Hi Karthick, I'd like to connect regarding…" required />
               </label>
               <button type="submit" className="btn btn--gold form__submit" disabled={sending}>
-                {FORM_KEY ? 'Send message' : 'Compose email'} <LuSend aria-hidden="true" />
+                Send message <LuSend aria-hidden="true" />
               </button>
               <p className="form__note" role="status">
-                {status ||
-                  (FORM_KEY
-                    ? 'Goes straight to my inbox.'
-                    : 'Prepares a direct email to Karthick Raja in your mail app.')}
+                {status || 'Goes straight to my inbox.'}
               </p>
             </form>
           </Reveal>

@@ -613,6 +613,10 @@ h3.section-heading__title {
   font-variant-numeric: tabular-nums;
 }
 
+.counter [data-text]::before {
+  content: attr(data-text);
+}
+
 .counter__affix {
   color: var(--gold);
 }

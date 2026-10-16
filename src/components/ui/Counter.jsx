@@ -29,10 +29,11 @@ export default function Counter({ value, decimals = 0, prefix = '', suffix = '',
         {value.toFixed(decimals)}
         {suffix}
       </span>
+      {/* Drawn from data-text via CSS, so the page text (and screen readers) only get the final value above. */}
       <span aria-hidden="true">
-        {prefix && <span className="counter__prefix">{prefix.trim()}</span>}
-        {current.toFixed(decimals)}
-        <span className="counter__affix">{suffix}</span>
+        {prefix && <span className="counter__prefix" data-text={prefix.trim()} />}
+        <span data-text={current.toFixed(decimals)} />
+        <span className="counter__affix" data-text={suffix} />
       </span>
     </span>
   );

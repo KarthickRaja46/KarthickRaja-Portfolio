@@ -17,6 +17,12 @@ export default function Skills() {
             <SkillCard key={group.title} group={group} index={i} />
           ))}
         </div>
+
+        {skills.learning && (
+          <Reveal as="p" className="skills__learning">
+            Currently learning: <strong>{skills.learning}</strong>
+          </Reveal>
+        )}
       </div>
     </section>
   );

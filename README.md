@@ -1,7 +1,7 @@
 <div align="center">
 
   # 📊 Karthick Raja
-  ### **Data Analyst & Power BI Developer**
+  ### **BI Analyst & Data Analyst**
 
   *Transforming Complex Datasets into Interactive Dashboards & Actionable Business Insights*
 
@@ -22,7 +22,7 @@
   ![Excel](https://img.shields.io/badge/Advanced_Excel-Power%20Pivot%20%26%20XLOOKUP-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
   ![Python](https://img.shields.io/badge/Python-Pandas%20%26%20NumPy-3776AB?style=flat-square&logo=python&logoColor=white)
   ![Azure](https://img.shields.io/badge/Microsoft_Azure-Cloud%20Data-0089D6?style=flat-square&logo=microsoftazure&logoColor=white)
-  ![Fabric](https://img.shields.io/badge/Microsoft_Fabric-Analytics-0078D4?style=flat-square)
+  ![Snowflake](https://img.shields.io/badge/Snowflake-Cloud%20Data-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
   ![Git](https://img.shields.io/badge/Git-Version%20Control-F05032?style=flat-square&logo=git&logoColor=white)
 
 </div>
@@ -31,9 +31,9 @@
 
 ## 👨‍💻 About Me
 
-**Data Analyst & Power BI Developer** with 1.5+ years of hands-on experience in **SQL, Power BI, DAX, Power Query, Excel, and data modeling**. Experienced in building KPI dashboards, executive reports, and automated BI solutions across **sales, banking, and supply chain datasets**. Tracked **AED 15M+ in commercial opportunities**, **reduced reporting turnaround time by 70%**, and **eliminated 12+ hours of weekly manual reporting**. Based in **Dubai, UAE** (available immediately).
+**BI Analyst & Data Analyst** with 1+ year of hands-on experience in **SQL, Power BI, DAX, Power Query, Excel, and data modeling**. Experienced in building KPI dashboards, executive reports, and automated BI solutions across **sales, banking, and supply chain datasets**. Tracked **AED 15M+ in commercial opportunities**, **reduced reporting turnaround time by 70%**, and **eliminated 12+ hours of weekly manual reporting**. Based in **Dubai, UAE** (available immediately).
 
-- 💼 **Current Status:** Open to Full-Time Data Analyst & Power BI Developer roles
+- 💼 **Current Status:** Open to Full-Time BI Analyst & Data Analyst roles
 - 🎯 **Core Specialization:** Power BI Desktop & Service, DAX, Star Schema Modeling, SQL (MySQL, PostgreSQL, T-SQL), Power Query (M), Power BI Gateway, Advanced Excel, Python (Pandas, NumPy, EDA)
 - 🌐 **Live Portfolio:** [https://karthickraja.page](https://karthickraja.page)
 
@@ -43,11 +43,11 @@
 
 | Metric | Detail |
 | :--- | :--- |
-| 💼 **Experience** | **1.5+ years** hands-on as a Data Analyst intern and freelance Power BI Developer |
+| 💼 **Experience** | **1+ year** hands-on as a Data Analyst intern and contract BI Analyst / Power BI Developer |
 | 📊 **Live BI projects** | **8** interactive Power BI reports, each with a PDF export |
 | 🔍 **Data Analyzed** | **800,000+** records cleaned, validated and modeled |
 | ⚡ **Reporting Efficiency** | **70%** faster reporting turnaround at Enjay (12+ hours saved weekly) |
-| 📜 **Credentials** | **2** Microsoft certifications + **4** course certificates |
+| 📜 **Credentials** | **7** professional certificates and courses from Microsoft, Google and IBM |
 
 ---
 
@@ -74,18 +74,21 @@
 | :--- | :--- |
 | **Advanced** | Power BI Desktop & Service, DAX (Complex Measures & Time Intelligence), SQL (MySQL, PostgreSQL, T-SQL), Star Schema & Semantic Data Modeling, Data Visualization & KPI Design |
 | **Strong** | Power Query (M Code), Advanced Excel (Power Pivot, XLOOKUP, Modeling), Data Validation & QA, Power BI Gateway & Scheduled Refreshes, Row-Level Security (RLS) |
-| **Working Knowledge** | Python (Pandas, NumPy, EDA), Microsoft Azure (Data Fundamentals), Microsoft Fabric, Power Automate, API Data Extraction |
+| **Working Knowledge** | Python (Pandas, NumPy, EDA), Microsoft Azure (Data Fundamentals), Snowflake, Power Automate, API Data Extraction |
+
+*Currently learning: Microsoft Fabric*
 
 ---
 
 ## 📜 Certifications & Courses
 
-1. 🏆 **Microsoft Certified: Power BI Data Analyst Associate** — Microsoft *(Credential ID: TYPPUPQXZ0T8)*
-2. 🏆 **Microsoft Certified: Azure Fundamentals** — Microsoft
-3. 📘 **Google Business Intelligence** — Professional Certificate, Coursera
-4. 📘 **Generative AI for Data Analysts** — IBM Specialization, Coursera *(Credential ID: Q5AF9GPDM2LU)*
-5. 📘 **Harnessing the Power of Data with Power BI** — Microsoft course certificate, Coursera *(Credential ID: FHTK7PQTG40Z)*
-6. 📘 **Career Essentials in Data Analysis** — Microsoft & LinkedIn, LinkedIn Learning
+1. 📘 **Microsoft Power BI Data Analyst** — Professional Certificate, Coursera *(Credential ID: TYPPUPQXZ0T8)*
+2. 📘 **Google Data Analytics** — Professional Certificate, Coursera *(Credential ID: AC9CYEX40XK8)*
+3. 🏆 **Microsoft Certified: Azure Fundamentals** — Microsoft
+4. 📘 **Google Business Intelligence** — Professional Certificate, Coursera
+5. 📘 **Generative AI for Data Analysts** — IBM Specialization, Coursera *(Credential ID: Q5AF9GPDM2LU)*
+6. 📘 **Harnessing the Power of Data with Power BI** — Microsoft course certificate, Coursera *(Credential ID: FHTK7PQTG40Z)*
+7. 📘 **Career Essentials in Data Analysis** — Microsoft & LinkedIn, LinkedIn Learning
 
 *All credentials can be verified directly on [LinkedIn Certifications](https://www.linkedin.com/in/karthick-raja-l-7a5b3a26b/details/certifications/).*
 
@@ -101,7 +104,7 @@
 - Conducted Exploratory Data Analysis (EDA) using SQL and Python (Pandas) to identify sales trends, customer churn indicators, and fulfillment bottlenecks.
 
 ### **Enjay Engineering Services** — *Dubai, UAE (Remote)*
-**Power BI Developer (Freelance)** | **May 2025 – Nov 2025**
+**BI Analyst / Power BI Developer (Contract)** | **May 2025 – Nov 2025**
 - Collaborated with business stakeholders to define reporting requirements, commercial KPIs, and executive dashboard layouts.
 - Designed and maintained Power BI dashboards delivering executive and project-level KPI reporting for engineering quotation and commercial pipeline performance, giving regional leadership visibility into AED 15M+ in active opportunities across UAE emirates.
 - Built Star Schema data models and 30+ DAX measures covering time intelligence, YoY growth, conversion rates, and quotation aging to support engineering project performance reporting and management reviews.
@@ -140,9 +143,9 @@ npm run dev
 npm run build
 ```
 
-Built with **React + Vite**, **Motion** for animation and **Lenis** for smooth scrolling. All portfolio copy (experience, projects, skills, certifications) lives in [`src/data/content.js`](src/data/content.js), and contact details in [`src/data/profile.js`](src/data/profile.js) — edit those files to update the site. Static files (resume PDF, project thumbnails and PDFs, icons, `sitemap.xml`, `robots.txt`) live in `public/`.
+Built with **React + Vite**, **Motion** for animation and **Lenis** for smooth scrolling. All portfolio copy (experience, projects, skills, certifications) lives in [`src/data/content.js`](src/data/content.js), and contact details in [`src/data/profile.js`](src/data/profile.js) — edit those files to update the site. Static files (resume PDFs, project thumbnails and PDFs, icons, `sitemap.xml`, `robots.txt`) live in `public/`.
 
-**Contact form:** set `VITE_WEB3FORMS_KEY` (a free key from [web3forms.com](https://web3forms.com)) in Vercel → Project → Settings → Environment Variables, then redeploy. Without it, the form falls back to opening the visitor's email app.
+**Contact form:** messages are sent over SMTP by the Vercel function [`api/contact.js`](api/contact.js) to the email in `src/data/profile.js`. Set `SMTP_USER` (your Gmail address) and `SMTP_PASS` (a Gmail [App Password](https://myaccount.google.com/apppasswords)) in Vercel → Project → Settings → Environment Variables, then redeploy. Until they are set — or under plain `npm run dev`, which doesn't run `/api` — the form falls back to opening the visitor's email app. Use `npx vercel dev` to test the real sending locally.
 
 ---
 
@@ -151,8 +154,7 @@ Built with **React + Vite**, **Motion** for animation and **Lenis** for smooth s
 - 🌐 **Portfolio Website:** [https://karthickraja.page](https://karthickraja.page)
 - 💼 **LinkedIn:** [Karthick Raja](https://www.linkedin.com/in/karthick-raja-l-7a5b3a26b/)
 - 🐙 **GitHub:** [KarthickRaja46](https://github.com/KarthickRaja46)
-- 💼 **Career Email:** [karthickrajacareer46@gmail.com](mailto:karthickrajacareer46@gmail.com)
-- ✉️ **Personal Email:** [karthickraja232205@gmail.com](mailto:karthickraja232205@gmail.com)
+- 💼 **Email:** [karthickrajacareer46@gmail.com](mailto:karthickrajacareer46@gmail.com)
 - 📱 **Phone / WhatsApp:** [+971 50 256 7444](https://wa.me/971502567444)
 - 📍 **Location:** Dubai, United Arab Emirates *(Available Immediately)*
 

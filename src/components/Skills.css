@@ -9,6 +9,18 @@
   gap: 1.5rem;
 }
 
+.skills__learning {
+  margin-top: 1.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-3);
+}
+
+.skills__learning strong {
+  color: var(--gold-light);
+}
+
 .skill-card-wrap {
   display: flex;
 }

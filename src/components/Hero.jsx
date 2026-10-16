@@ -66,9 +66,11 @@ export default function Hero() {
             <a href="#contact" className="btn btn--gold">
               Get in touch <LuArrowUpRight aria-hidden="true" />
             </a>
-            <a href={profile.resume} className="btn btn--glass" target="_blank" rel="noopener noreferrer">
-              <LuFileText aria-hidden="true" /> View resume
-            </a>
+            {profile.resumes.map((cv) => (
+              <a key={cv.href} href={cv.href} className="btn btn--glass" target="_blank" rel="noopener noreferrer">
+                <LuFileText aria-hidden="true" /> {cv.label}
+              </a>
+            ))}
             <a href={profile.linkedin} className="icon-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
               <FaLinkedinIn aria-hidden="true" />
             </a>
