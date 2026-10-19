@@ -44,9 +44,9 @@ export const hero = {
     'ETL Automation & Business Analytics',
   ],
   tagline:
-    'BI Analyst & Data Analyst with 1+ year of hands-on experience in **SQL, Power BI, DAX, Power Query, Excel, and data modeling**. I build KPI dashboards, executive reports, and BI solutions across **sales, banking, real estate, and supply chain**.',
+    'BI Analyst & Data Analyst with 1.4+ years of hands-on experience in **SQL, Power BI, DAX, Power Query, Excel, and data modeling**. I build KPI dashboards, executive reports, and BI solutions across **sales, banking, real estate, and supply chain**.',
   stats: [
-    { value: 1, suffix: '+', label: 'Years experience' },
+    { value: 1.4, decimals: 1, suffix: '+', label: 'Years experience' },
     { prefix: 'AED ', value: 15, suffix: 'M+', label: 'Pipeline tracked' },
     { value: 70, suffix: '%', label: 'Faster reporting' },
   ],

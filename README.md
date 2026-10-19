@@ -31,7 +31,7 @@
 
 ## 👨‍💻 About Me
 
-**BI Analyst & Data Analyst** with 1+ year of hands-on experience in **SQL, Power BI, DAX, Power Query, Excel, and data modeling**. Experienced in building KPI dashboards, executive reports, and automated BI solutions across **sales, banking, and supply chain datasets**. Tracked **AED 15M+ in commercial opportunities**, **reduced reporting turnaround time by 70%**, and **eliminated 12+ hours of weekly manual reporting**. Based in **Dubai, UAE** (available immediately).
+**BI Analyst & Data Analyst** with 1.4+ years of hands-on experience in **SQL, Power BI, DAX, Power Query, Excel, and data modeling**. Experienced in building KPI dashboards, executive reports, and automated BI solutions across **sales, banking, and supply chain datasets**. Tracked **AED 15M+ in commercial opportunities**, **reduced reporting turnaround time by 70%**, and **eliminated 12+ hours of weekly manual reporting**. Based in **Dubai, UAE** (available immediately).
 
 - 💼 **Current Status:** Open to Full-Time BI Analyst & Data Analyst roles
 - 🎯 **Core Specialization:** Power BI Desktop & Service, DAX, Star Schema Modeling, SQL (MySQL, PostgreSQL, T-SQL), Power Query (M), Power BI Gateway, Advanced Excel, Python (Pandas, NumPy, EDA)
@@ -43,7 +43,7 @@
 
 | Metric | Detail |
 | :--- | :--- |
-| 💼 **Experience** | **1+ year** hands-on as a Data Analyst intern and contract BI Analyst / Power BI Developer |
+| 💼 **Experience** | **1.4+ years** hands-on as a Data Analyst intern and contract BI Analyst / Power BI Developer |
 | 📊 **Live BI projects** | **8** interactive Power BI reports, each with a PDF export |
 | 🔍 **Data Analyzed** | **800,000+** records cleaned, validated and modeled |
 | ⚡ **Reporting Efficiency** | **70%** faster reporting turnaround at Enjay (12+ hours saved weekly) |
