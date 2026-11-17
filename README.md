@@ -1,11 +1,11 @@
 <div align="center">
 
-  # 📊 Karthick Raja
-  ### **BI Analyst & Data Analyst**
+  # 📊 Karthick Raja L
+  ### **Data Analyst | SQL · Python · Power BI**
 
-  *Transforming Complex Datasets into Interactive Dashboards & Actionable Business Insights*
+  *Taking Business Questions from Raw Data through SQL and Python Analysis to Clear Decision-Ready Reports*
 
-  📍 **Dubai, UAE** *(Available Immediately)* | 🎓 **B.E. Computer Science & Engineering**
+  📍 **Chennai, India** *(Available Immediately)* | 🎓 **B.E. Computer Science and Engineering**
 
   [![Portfolio](https://img.shields.io/badge/Live_Portfolio-Website-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://karthickraja.page/)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-Karthick_Raja-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karthick-raja-l-7a5b3a26b/)
@@ -15,12 +15,12 @@
   ---
 
   ### 🛠️ Core Tech Stack
-  ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
-  ![DAX](https://img.shields.io/badge/DAX-Data%20Analysis%20Expressions-0284C7?style=flat-square)
-  ![Power Query](https://img.shields.io/badge/Power_Query-0089D6?style=flat-square)
-  ![SQL](https://img.shields.io/badge/SQL-MySQL%20%7C%20PostgreSQL%20%7C%20T--SQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-  ![Excel](https://img.shields.io/badge/Advanced_Excel-Power%20Pivot%20%26%20XLOOKUP-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+  ![SQL](https://img.shields.io/badge/SQL-Server%20%7C%20MySQL%20%7C%20CTEs-4479A1?style=flat-square&logo=mysql&logoColor=white)
   ![Python](https://img.shields.io/badge/Python-Pandas%20%26%20NumPy-3776AB?style=flat-square&logo=python&logoColor=white)
+  ![Power BI](https://img.shields.io/badge/Power_BI-Desktop%20%26%20Service-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+  ![DAX](https://img.shields.io/badge/DAX-Measures%20%26%20Time%20Intel-0284C7?style=flat-square)
+  ![Power Query](https://img.shields.io/badge/Power_Query-M%20Formulas-0089D6?style=flat-square)
+  ![Excel](https://img.shields.io/badge/Advanced_Excel-Power%20Pivot%20%26%20XLOOKUP-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
   ![Azure](https://img.shields.io/badge/Microsoft_Azure-Cloud%20Data-0089D6?style=flat-square&logo=microsoftazure&logoColor=white)
   ![Snowflake](https://img.shields.io/badge/Snowflake-Cloud%20Data-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
   ![Git](https://img.shields.io/badge/Git-Version%20Control-F05032?style=flat-square&logo=git&logoColor=white)
@@ -29,12 +29,13 @@
 
 ---
 
-## 👨‍💻 About Me
+## 👨‍💻 Profile Summary
 
-**BI Analyst & Data Analyst** with 1.4+ years of hands-on experience in **SQL, Power BI, DAX, Power Query, Excel, and data modeling**. Experienced in building KPI dashboards, executive reports, and automated BI solutions across **sales, banking, and supply chain datasets**. Tracked **AED 15M+ in commercial opportunities**, **reduced reporting turnaround time by 70%**, and **eliminated 12+ hours of weekly manual reporting**. Based in **Dubai, UAE** (available immediately).
+Data analyst with over a year of experience in retail and sales data. Cleaned and modeled **500K+ transaction records** in SQL at **Besant Technologies**, Chennai, and built sales pipeline reporting for a **Dubai engineering company**. Automated a weekly report that saved **12+ hours** and cut reporting delays by **35%**. Takes business questions from raw data through SQL and Python analysis to clear reports that managers use for decisions.
 
-- 💼 **Current Status:** Open to Full-Time BI Analyst & Data Analyst roles
-- 🎯 **Core Specialization:** Power BI Desktop & Service, DAX, Star Schema Modeling, SQL (MySQL, PostgreSQL, T-SQL), Power Query (M), Power BI Gateway, Advanced Excel, Python (Pandas, NumPy, EDA)
+- 💼 **Current Status:** Available immediately (Open to Full-Time Data Analyst roles)
+- 📍 **Location:** Chennai, India
+- 🎯 **Core Specialization:** SQL (Server & MySQL, CTEs, Window Functions), Python (Pandas, NumPy, EDA), Power BI (DAX, Star Schema Modeling, RLS), Power Query (M), Microsoft Azure, Advanced Excel
 - 🌐 **Live Portfolio:** [https://karthickraja.page](https://karthickraja.page)
 
 ---
@@ -43,82 +44,70 @@
 
 | Metric | Detail |
 | :--- | :--- |
-| 💼 **Experience** | **1.4+ years** hands-on as a Data Analyst intern and contract BI Analyst / Power BI Developer |
-| 📊 **Live BI projects** | **8** interactive Power BI reports, each with a PDF export |
-| 🔍 **Data Analyzed** | **800,000+** records cleaned, validated and modeled |
-| ⚡ **Reporting Efficiency** | **70%** faster reporting turnaround at Enjay (12+ hours saved weekly) |
-| 📜 **Credentials** | **7** professional certificates and courses from Microsoft, Google and IBM |
+| 💼 **Experience** | **1+ year** hands-on across retail data pipelines and commercial BI reporting |
+| 🔍 **Data Modeled** | **500,000+** transaction records cleaned and modeled in SQL |
+| ⚡ **Reporting Efficiency** | **12+ hours** saved weekly via Power Query automation & **35%** cut in reporting delays |
+| 📊 **Live Analytics Projects** | **9** interactive reports in Power BI, Python, and SQL |
+| 📜 **Certifications** | Microsoft Azure Fundamentals, Microsoft Data Analytics / Power BI, Google Data Analytics |
 
 ---
 
 ## 🚀 Projects
 
-| Project | Domain | What it covers | Links |
+| Project | Stack | What it covers | Links |
 | :--- | :--- | :--- | :--- |
-| **UAE Real Estate Analytics** | Real Estate · UAE | 8,000 listings across all seven emirates: AED 3bn in sales, AED 311M commission, rental occupancy and an 18-brokerage leaderboard. | [Live](https://app.powerbi.com/view?r=eyJrIjoiYWI1YjViZTQtNTg3Zi00MmYwLThkMDAtYmY0YTFjNzU4MzEyIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/UAE-Real-Estate-Analytics-PowerBI) · [PDF](public/assets/projects/uae-real-estate.pdf) |
-| **Banking Performance Dashboard** | Financial Analytics | ₹4.87B in transaction value across 150K transactions, with fee and tax tracking, state-wise revenue and failed-transaction analysis. | [Live](https://app.powerbi.com/view?r=eyJrIjoiM2E0ZTNiMTEtYWMwNS00NWE4LWE2ODMtZDhlZmYwYzdjNzE2IiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/Banking-Performance-Analytics) · [PDF](public/assets/projects/banking-performance.pdf) |
-| **VOLT IQ – Industrial IoT Platform** | Industrial IoT | 100K+ sensor readings from 50 machines: anomaly detection, predictive maintenance, energy and data-quality monitoring. | [Live](https://app.powerbi.com/view?r=eyJrIjoiMjI0MDdhOTYtMmJmZi00YjM5LWIwZGQtZGIyNjhhOWZmZTFkIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/VOLT-IQ-Industrial-IoT-Analytics) · [PDF](public/assets/projects/volt-iq.pdf) |
-| **Business Performance & Customer Analytics** | Subscription & Revenue | 7.77M revenue, 92.3% collection rate, 421K MRR and 7.97% churn by segment, industry and usage. | [Live](https://app.powerbi.com/view?r=eyJrIjoiMWI4YjFjODQtOTBkOS00ZmM2LWI0NTgtNmM0NmQ1ZTAxYWFiIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/Business-Performance-Customer-Intelligence) · [PDF](public/assets/projects/business-performance.pdf) |
-| **ClaimVision – Healthcare Claims Analytics** | Healthcare | 20K claims across 1,000 providers, with demographics, provider efficiency and 5,011 high-fraud-risk claims flagged. | [Live](https://app.powerbi.com/view?r=eyJrIjoiMWQxMzFjYTAtZjkxMi00YzViLTg2NTktMGI5Y2YzNWRkNDBkIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/ClaimVision-Healthcare-Analytics) · [PDF](public/assets/projects/claimvision.pdf) |
-| **API Performance Monitoring System** | API Monitoring · Python | 559K API requests across 11 endpoints: SLA breaches, latency bottlenecks and a system health score, fed by a Python + MySQL ETL. | [Live](https://app.powerbi.com/view?r=eyJrIjoiZmNmMzFhZTAtYWZiZS00OWQyLWEyMDgtYjllNTJkM2FmMTgzIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/API-Performance-Monitoring-Analytics) · [PDF](public/assets/projects/api-monitoring.pdf) |
-| **Retail Analytics & Profit Insights** | Retail | $798K sales and $78K profit (9.8% margin), 2014–2017, by category, city and sales manager. | [Live](https://app.powerbi.com/view?r=eyJrIjoiZWRiMTkxYTYtOGRhZS00NTRiLTg4MTgtMGI4MjcyMDhiMjgzIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/Retail-Analytics-Profit-Insights) · [PDF](public/assets/projects/retail-profit.pdf) |
-| **Loan Analytics & Risk Management** | Lending & Risk | 20K loan applications worth 498M by credit score, employment, education and purpose, flagging high-risk applicants. | [Live](https://app.powerbi.com/view?r=eyJrIjoiMzkxYzQ5ZGUtYTQ2ZC00MWFlLWIxNzAtOWZlMDU0MjMzMzFlIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [PDF](public/assets/projects/loan-risk.pdf) |
-
-![UAE Real Estate Analytics](public/assets/projects/uae-real-estate.webp)
-
----
-
-## 🛠️ Technical Skills Matrix
-
-| Proficiency Level | Skills & Technologies |
-| :--- | :--- |
-| **Advanced** | Power BI Desktop & Service, DAX (Complex Measures & Time Intelligence), SQL (MySQL, PostgreSQL, T-SQL), Star Schema & Semantic Data Modeling, Data Visualization & KPI Design |
-| **Strong** | Power Query (M Code), Advanced Excel (Power Pivot, XLOOKUP, Modeling), Data Validation & QA, Power BI Gateway & Scheduled Refreshes, Row-Level Security (RLS) |
-| **Working Knowledge** | Python (Pandas, NumPy, EDA), Microsoft Azure (Data Fundamentals), Snowflake, Power Automate, API Data Extraction |
-
-*Currently learning: Microsoft Fabric*
+| **Banking Performance Analytics** | SQL, Power BI, DAX, Power Query | Analyzed ₹87 crore in transaction value across 150K transactions, including fees and tax. Investment transactions drove 56% of total value; analyzed a 10% transaction failure rate evenly spread across states and segments. | [Live](https://app.powerbi.com/view?r=eyJrIjoiM2E0ZTNiMTEtYWMwNS00NWE4LWE2ODMtZDhlZmYwYzdjNzE2IiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/Banking-Performance-Analytics) · [PDF](public/assets/projects/banking-performance.pdf) |
+| **API Performance Monitoring** | Python, MySQL, Power BI | Built a Python and MySQL pipeline loading 559K API request logs across 11 endpoints. Found the checkout endpoint breached SLA on every request (1,522 ms avg); latency surged 91% during peak hours. | [Live](https://app.powerbi.com/view?r=eyJrIjoiZmNmMzFhZTAtYWZiZS00OWQyLWEyMDgtYjllNTJkM2FmMTgzIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/API-Performance-Monitoring-Analytics) · [PDF](public/assets/projects/api-monitoring.pdf) |
+| **VOLT IQ: Industrial IoT Analytics** | Power BI, DAX, Power Query | Turned 100K+ sensor readings from 50 machines into a 6-page operations report. Flagged 8,766 anomalies and tracked energy use and sensor data quality for predictive maintenance. | [Live](https://app.powerbi.com/view?r=eyJrIjoiMjI0MDdhOTYtMmJmZi00YjM5LWIwZGQtZGIyNjhhOWZmZTFkIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/VOLT-IQ-Industrial-IoT-Analytics) · [PDF](public/assets/projects/volt-iq.pdf) |
+| **Retail Analytics & Profit Insights** | Power BI, DAX, Power Query | $798K sales and $78K profit (9.8% margin), 2014–2017, by category, city and sales manager to identify loss-making products. | [Live](https://app.powerbi.com/view?r=eyJrIjoiZWRiMTkxYTYtOGRhZS00NTRiLTg4MTgtMGI4MjcyMDhiMjgzIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/Retail-Analytics-Profit-Insights) · [PDF](public/assets/projects/retail-profit.pdf) |
+| **Business Performance & Customer Analytics** | Power BI, DAX, Power Query | 5-page subscription billing report: 7.77M revenue, 92.3% collection rate, 421K MRR and 7.97% churn by segment, industry and usage. | [Live](https://app.powerbi.com/view?r=eyJrIjoiMWI4YjFjODQtOTBkOS00ZmM2LWI0NTgtNmM0NmQ1ZTAxYWFiIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/Business-Performance-Customer-Intelligence) · [PDF](public/assets/projects/business-performance.pdf) |
+| **UAE Real Estate Analytics** | Power BI, DAX, Power Query | 8,000 listings across all seven emirates: AED 3bn in sales, AED 311M commission, rental occupancy and an 18-brokerage leaderboard. | [Live](https://app.powerbi.com/view?r=eyJrIjoiYWI1YjViZTQtNTg3Zi00MmYwLThkMDAtYmY0YTFjNzU4MzEyIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/UAE-Real-Estate-Analytics-PowerBI) · [PDF](public/assets/projects/uae-real-estate.pdf) |
+| **Steel Quotation & Sales Analytics** | Power BI, DAX, SQL, Power Query | Commercial quotation and sales pipeline analytics for Enjay Engineering (Dubai). Saved 12+ hours weekly, built star-schema model with 30+ DAX measures, and analyzed margin leakage. | Client Project *(confidential)* |
+| **ClaimVision – Healthcare Claims Analytics** | Power BI, DAX, Power Query | 20K claims across 1,000 providers, with demographics, provider efficiency and 5,011 high-fraud-risk claims flagged. | [Live](https://app.powerbi.com/view?r=eyJrIjoiMWQxMzFjYTAtZjkxMi00YzViLTg2NTktMGI5Y2YzNWRkNDBkIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/ClaimVision-Healthcare-Analytics) · [PDF](public/assets/projects/claimvision.pdf) |
+| **Loan Analytics & Risk Management** | Power BI, DAX, Power Query | 20K loan applications worth 498M by credit score, employment, education and purpose, flagging high-risk applicants. | [Live](https://app.powerbi.com/view?r=eyJrIjoiMzkxYzQ5ZGUtYTQ2ZC00MWFlLWIxNzAtOWZlMDU0MjMzMzFlIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [PDF](public/assets/projects/loan-risk.pdf) |
 
 ---
 
-## 📜 Certifications & Courses
+## 🛠️ Technical Skills
 
-1. 📘 **Microsoft Power BI Data Analyst** — Professional Certificate, Coursera *(Credential ID: TYPPUPQXZ0T8)*
-2. 📘 **Google Data Analytics** — Professional Certificate, Coursera *(Credential ID: AC9CYEX40XK8)*
-3. 🏆 **Microsoft Certified: Azure Fundamentals** — Microsoft
-4. 📘 **Google Business Intelligence** — Professional Certificate, Coursera
-5. 📘 **Generative AI for Data Analysts** — IBM Specialization, Coursera *(Credential ID: Q5AF9GPDM2LU)*
-6. 📘 **Harnessing the Power of Data with Power BI** — Microsoft course certificate, Coursera *(Credential ID: FHTK7PQTG40Z)*
-7. 📘 **Career Essentials in Data Analysis** — Microsoft & LinkedIn, LinkedIn Learning
-
-*All credentials can be verified directly on [LinkedIn Certifications](https://www.linkedin.com/in/karthick-raja-l-7a5b3a26b/details/certifications/).*
+- **SQL & Databases:** SQL Server, MySQL, Joins, CTEs, Subqueries, Window Functions, Aggregations, Query Tuning, Star Schema
+- **Python & Cloud:** Python (Pandas, NumPy), Microsoft Azure, Snowflake, ETL, Git
+- **Power BI & Visualization:** Power BI (Desktop & Service), DAX, Power Query (M), Star Schema Data Modeling, KPI Dashboards, Row Level Security (RLS)
+- **Excel & Reporting:** Advanced Excel, Pivot Tables, XLOOKUP, INDEX-MATCH, Power Pivot, Reporting Automation
+- **Data Analysis:** Sales & Revenue Analysis, KPI Tracking, Trend & Variance Analysis, Customer Segmentation, Churn Analysis, EDA, Data Cleaning & Validation
 
 ---
 
 ## 💼 Work Experience
 
 ### **Besant Technologies** — *Chennai, India*
-**Data Analyst Intern** | **Jan 2026 – Jul 2026**
-- Built end-to-end BI reporting solutions across Retail, Banking, and Supply Chain datasets, covering data extraction, cleansing, validation, analysis, and Power BI reporting.
-- Used SQL with CTEs, joins, window functions, and aggregations to clean, validate, and standardize 500K+ transactional records, improving data accuracy and consistency across reports.
-- Configured scheduled data refresh automation through Power BI Gateway, reducing reporting delays by 35% and improving reporting turnaround.
-- Conducted Exploratory Data Analysis (EDA) using SQL and Python (Pandas) to identify sales trends, customer churn indicators, and fulfillment bottlenecks.
+**Data Analyst** | **Jan 2026 – Jul 2026**
+- Cleaned and standardized 500K+ retail transaction records in SQL using CTEs, joins and window functions.
+- Performed EDA in SQL and Python (Pandas) to identify sales trends, churn indicators and fulfillment delays.
+- Analyzed product and segment performance to identify top-selling and underperforming lines.
+- Built Power BI dashboards for retail sales, customer behavior and fulfillment on one consistent data model.
+- Staged data in Azure and automated refresh via Power BI Gateway, cutting reporting delays by 35%.
 
-### **Enjay Engineering Services** — *Dubai, UAE (Remote)*
-**BI Analyst / Power BI Developer (Contract)** | **May 2025 – Nov 2025**
-- Collaborated with business stakeholders to define reporting requirements, commercial KPIs, and executive dashboard layouts.
-- Designed and maintained Power BI dashboards delivering executive and project-level KPI reporting for engineering quotation and commercial pipeline performance, giving regional leadership visibility into AED 15M+ in active opportunities across UAE emirates.
-- Built Star Schema data models and 30+ DAX measures covering time intelligence, YoY growth, conversion rates, and quotation aging to support engineering project performance reporting and management reviews.
-- Automated the weekly quotation reporting workflow using Power Query, eliminating 12+ hours of manual reporting effort per week and reducing reporting turnaround time by 70%.
-- Analyzed regional product demand, steel grades, volumes, pricing, and margins to identify margin leakage, improving sales conversion by 15% through emirate-level opportunity tracking.
-- Implemented Row-Level Security (RLS) to provide role-specific branch-level access for regional sales managers, strengthening data security and reporting governance.
+### **Enjay Engineering** — *Dubai, UAE (Remote, Contract)*
+**BI Analyst** | **May 2025 – Nov 2025**
+- Defined win rate, quotation aging and conversion KPIs with regional sales managers across all open quotations.
+- Automated the weekly quotation report in Power Query, saving 12+ hours of manual work every week.
+- Built a star-schema model and 30+ DAX measures (YoY growth, conversion, aging), validated against source data.
+- Analyzed customer, product and pricing data to identify demand trends, margin leakage and stalled quotations.
 
 ---
 
 ## 🎓 Education
 
-**Bachelor of Engineering (B.E.) — Computer Science & Engineering**  
-*Hindusthan Institute of Technology, Coimbatore, India* | **2022 – 2026**  
-*Medium of Instruction: English*
+**B.E. Computer Science and Engineering**  
+*Hindusthan Institute of Technology, Coimbatore* | **2022 – 2026**
+
+---
+
+## 📜 Certifications & Languages
+
+- **Certifications:** Microsoft Azure Fundamentals | Microsoft Data Analytics (Power BI)
+- **Languages:** English | Tamil | Malayalam
 
 ---
 
@@ -143,10 +132,6 @@ npm run dev
 npm run build
 ```
 
-Built with **React + Vite**, **Motion** for animation and **Lenis** for smooth scrolling. All portfolio copy (experience, projects, skills, certifications) lives in [`src/data/content.js`](src/data/content.js), and contact details in [`src/data/profile.js`](src/data/profile.js) — edit those files to update the site. Static files (resume PDFs, project thumbnails and PDFs, icons, `sitemap.xml`, `robots.txt`) live in `public/`.
-
-**Contact form:** messages are sent over SMTP by the Vercel function [`api/contact.js`](api/contact.js) to the email in `src/data/profile.js`. Set `SMTP_USER` (your Gmail address) and `SMTP_PASS` (a Gmail [App Password](https://myaccount.google.com/apppasswords)) in Vercel → Project → Settings → Environment Variables, then redeploy. Until they are set — or under plain `npm run dev`, which doesn't run `/api` — the form falls back to opening the visitor's email app. Use `npx vercel dev` to test the real sending locally.
-
 ---
 
 ## 📬 Contact & Connect
@@ -155,10 +140,12 @@ Built with **React + Vite**, **Motion** for animation and **Lenis** for smooth s
 - 💼 **LinkedIn:** [Karthick Raja](https://www.linkedin.com/in/karthick-raja-l-7a5b3a26b/)
 - 🐙 **GitHub:** [KarthickRaja46](https://github.com/KarthickRaja46)
 - 💼 **Email:** [karthickrajacareer46@gmail.com](mailto:karthickrajacareer46@gmail.com)
-- 📱 **Phone / WhatsApp:** [+971 50 256 7444](https://wa.me/971502567444)
-- 📍 **Location:** Dubai, United Arab Emirates *(Available Immediately)*
+- 📱 **Phone (India):** [+91 6383 268445](tel:+916383268445)
+- 📱 **Phone (Dubai / UAE):** [+971 50 256 7444](tel:+971502567444)
+- 💬 **WhatsApp:** [Chat on WhatsApp](https://wa.me/916383268445)
+- 📍 **Location:** Chennai, India *(Available Immediately)*
 
 <div align="center">
   <br/>
-  <i>© 2026 Karthick Raja. Built with passion for data analytics and business intelligence.</i>
+  <i>© 2026 Karthick Raja L. Built with passion for data analytics and business intelligence.</i>
 </div>

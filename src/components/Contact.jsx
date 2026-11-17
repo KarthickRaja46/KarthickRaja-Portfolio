@@ -12,10 +12,11 @@ const CONTACT_ENDPOINT = '/api/contact';
 
 const channels = [
   { icon: LuMapPin, label: 'Location', value: profile.locationLong },
-  { icon: LuPhone, label: 'Phone', value: profile.phone, href: profile.phoneHref },
+  { icon: LuPhone, label: 'Phone (India)', value: profile.phoneIndia || profile.phone, href: profile.phoneIndiaHref || profile.phoneHref },
+  { icon: LuPhone, label: 'Phone (Dubai / UAE)', value: profile.phoneUAE, href: profile.phoneUAEHref },
   { icon: LuMail, label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
-  { icon: FaLinkedinIn, label: 'LinkedIn', value: profile.linkedinHandle, href: profile.linkedin, external: true },
   { icon: FaWhatsapp, label: 'WhatsApp', value: 'Chat on WhatsApp', href: profile.whatsapp, external: true },
+  { icon: FaLinkedinIn, label: 'LinkedIn', value: profile.linkedinHandle, href: profile.linkedin, external: true },
   { icon: FaGithub, label: 'GitHub', value: 'KarthickRaja46', href: profile.github, external: true },
 ];
 
