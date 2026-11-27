@@ -31,7 +31,7 @@
 
 ## 👨‍💻 Profile Summary
 
-Data analyst with over a year of experience in retail and sales data. Cleaned and modeled **500K+ transaction records** in SQL at **Besant Technologies**, Chennai, and built sales pipeline reporting for a **Dubai engineering company**. Automated a weekly report that saved **12+ hours** and cut reporting delays by **35%**. Takes business questions from raw data through SQL and Python analysis to clear reports that managers use for decisions.
+Data analyst with over a year of experience in retail and sales data. Cleaned and modeled **500K+ transaction records** in SQL and built sales pipeline reporting for a **Dubai engineering company**. Automated a weekly report that saved **12+ hours** and cut reporting delays by **35%**. Takes business questions from raw data through SQL and Python analysis to clear reports that managers use for decisions.
 
 - 💼 **Current Status:** Available immediately (Open to Full-Time Data Analyst roles)
 - 📍 **Location:** Chennai, India
@@ -44,10 +44,10 @@ Data analyst with over a year of experience in retail and sales data. Cleaned an
 
 | Metric | Detail |
 | :--- | :--- |
-| 💼 **Experience** | **1+ year** hands-on across retail data pipelines and commercial BI reporting |
+| 💼 **Experience** | **1+ year** hands-on across sales/operational analytics and commercial BI reporting |
 | 🔍 **Data Modeled** | **500,000+** transaction records cleaned and modeled in SQL |
 | ⚡ **Reporting Efficiency** | **12+ hours** saved weekly via Power Query automation & **35%** cut in reporting delays |
-| 📊 **Live Analytics Projects** | **9** interactive reports in Power BI, Python, and SQL |
+| 📊 **Analytics Projects** | **9** Power BI, Python and SQL reports (8 live, 1 confidential client project) |
 | 📜 **Certifications** | Microsoft Azure Fundamentals, Microsoft Data Analytics / Power BI, Google Data Analytics |
 
 ---
@@ -62,7 +62,7 @@ Data analyst with over a year of experience in retail and sales data. Cleaned an
 | **Retail Analytics & Profit Insights** | Power BI, DAX, Power Query | $798K sales and $78K profit (9.8% margin), 2014–2017, by category, city and sales manager to identify loss-making products. | [Live](https://app.powerbi.com/view?r=eyJrIjoiZWRiMTkxYTYtOGRhZS00NTRiLTg4MTgtMGI4MjcyMDhiMjgzIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/Retail-Analytics-Profit-Insights) · [PDF](public/assets/projects/retail-profit.pdf) |
 | **Business Performance & Customer Analytics** | Power BI, DAX, Power Query | 5-page subscription billing report: 7.77M revenue, 92.3% collection rate, 421K MRR and 7.97% churn by segment, industry and usage. | [Live](https://app.powerbi.com/view?r=eyJrIjoiMWI4YjFjODQtOTBkOS00ZmM2LWI0NTgtNmM0NmQ1ZTAxYWFiIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/Business-Performance-Customer-Intelligence) · [PDF](public/assets/projects/business-performance.pdf) |
 | **UAE Real Estate Analytics** | Power BI, DAX, Power Query | 8,000 listings across all seven emirates: AED 3bn in sales, AED 311M commission, rental occupancy and an 18-brokerage leaderboard. | [Live](https://app.powerbi.com/view?r=eyJrIjoiYWI1YjViZTQtNTg3Zi00MmYwLThkMDAtYmY0YTFjNzU4MzEyIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/UAE-Real-Estate-Analytics-PowerBI) · [PDF](public/assets/projects/uae-real-estate.pdf) |
-| **Steel Quotation & Sales Analytics** | Power BI, DAX, SQL, Power Query | Commercial quotation and sales pipeline analytics for Enjay Engineering (Dubai). Saved 12+ hours weekly, built star-schema model with 30+ DAX measures, and analyzed margin leakage. | Client Project *(confidential)* |
+| **Steel Quotation & Sales Analytics** | Power BI, DAX, SQL, Power Query | Commercial quotation and sales pipeline analytics for Enjay Engineering Services (Dubai). Saved 12+ hours weekly, built star-schema model with 30+ DAX measures, and analyzed margin leakage. | Client Project *(confidential)* |
 | **ClaimVision – Healthcare Claims Analytics** | Power BI, DAX, Power Query | 20K claims across 1,000 providers, with demographics, provider efficiency and 5,011 high-fraud-risk claims flagged. | [Live](https://app.powerbi.com/view?r=eyJrIjoiMWQxMzFjYTAtZjkxMi00YzViLTg2NTktMGI5Y2YzNWRkNDBkIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [GitHub](https://github.com/KarthickRaja46/ClaimVision-Healthcare-Analytics) · [PDF](public/assets/projects/claimvision.pdf) |
 | **Loan Analytics & Risk Management** | Power BI, DAX, Power Query | 20K loan applications worth 498M by credit score, employment, education and purpose, flagging high-risk applicants. | [Live](https://app.powerbi.com/view?r=eyJrIjoiMzkxYzQ5ZGUtYTQ2ZC00MWFlLWIxNzAtOWZlMDU0MjMzMzFlIiwidCI6IjNjYjM3ODQ0LTAxZGEtNGJlYS04MDEwLTBmYjFmNWExZWM0ZSJ9) · [PDF](public/assets/projects/loan-risk.pdf) |
 
@@ -80,20 +80,24 @@ Data analyst with over a year of experience in retail and sales data. Cleaned an
 
 ## 💼 Work Experience
 
-### **Besant Technologies** — *Chennai, India*
-**Data Analyst** | **Jan 2026 – Jul 2026**
-- Cleaned and standardized 500K+ retail transaction records in SQL using CTEs, joins and window functions.
-- Performed EDA in SQL and Python (Pandas) to identify sales trends, churn indicators and fulfillment delays.
-- Analyzed product and segment performance to identify top-selling and underperforming lines.
-- Built Power BI dashboards for retail sales, customer behavior and fulfillment on one consistent data model.
-- Staged data in Azure and automated refresh via Power BI Gateway, cutting reporting delays by 35%.
+### **Digisailor** — *Thoothukudi (Tuticorin), Tamil Nadu, India (Full-time, On-site)*
+**Data Analyst** | **May 2026 – Nov 2026**
+- Built and maintained Power BI dashboards and reports on sales, commercial and operational data for business intelligence.
+- Wrote and optimised SQL (joins, CTEs, window functions) to clean, validate and transform large datasets.
+- Automated recurring reports with Power Query and scheduled refresh, cutting manual reporting effort.
+- Ran exploratory analysis in Python (Pandas) and defined KPIs so metrics stayed consistent across management reports.
 
-### **Enjay Engineering** — *Dubai, UAE (Remote, Contract)*
-**BI Analyst** | **May 2025 – Nov 2025**
-- Defined win rate, quotation aging and conversion KPIs with regional sales managers across all open quotations.
-- Automated the weekly quotation report in Power Query, saving 12+ hours of manual work every week.
-- Built a star-schema model and 30+ DAX measures (YoY growth, conversion, aging), validated against source data.
-- Analyzed customer, product and pricing data to identify demand trends, margin leakage and stalled quotations.
+### **Career Break** — *Final-year studies*
+**Nov 2025 – Apr 2026**
+- Completed my final year of B.E. Computer Science and Engineering — coursework, project work and final-semester exams — graduating in April 2026.
+- Kept building data skills through self-driven projects in SQL, Python and Power BI.
+
+### **Enjay Engineering Services** — *Dubai, UAE (Contract, Remote)*
+**BI Analyst / Power BI Developer** | **May 2025 – Nov 2025**
+- Built KPI dashboards for the engineering quotation and commercial pipeline, giving leadership visibility into AED 15M+ of active opportunities.
+- Designed Star Schema data models with 30+ DAX measures and Row-Level Security for regional sales managers.
+- Automated the weekly quotation report in Power Query, saving 12+ hours a week.
+- Analysed customer, regional, product and pricing data to surface demand trends and margin leakage.
 
 ---
 

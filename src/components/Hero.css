@@ -451,7 +451,8 @@
 
 @media (max-width: 960px) {
   .hero__grid {
-    grid-template-columns: 1fr;
+    /* minmax(0, …) so a long nowrap phrase can't widen the column past the screen. */
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .hero-visual {
@@ -474,8 +475,18 @@
     align-items: flex-start;
   }
 
+  .hero__rotator {
+    max-width: 100%;
+  }
+
   .hero__rotator-window {
     font-size: 0.92rem;
+  }
+
+  /* Let long phrases wrap on narrow phones instead of being clipped. */
+  .hero__rotator-ghost,
+  .hero__rotator-phrase {
+    white-space: normal;
   }
 
   .hero__stats {

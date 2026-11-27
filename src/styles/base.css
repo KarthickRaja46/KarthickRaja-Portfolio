@@ -25,7 +25,7 @@
   --grad-iris: linear-gradient(100deg, #ffe7a8 0%, #f5c451 22%, #ff9e7a 48%, #d7a6ff 74%, #ffe7a8 100%);
   --grad-heading: linear-gradient(180deg, #ffffff 30%, #c9cde0 100%);
   --grad-ghost: linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.02));
-  --grad-wordmark: linear-gradient(180deg, rgba(255, 226, 154, 0.4), rgba(168, 120, 255, 0.12) 55%, transparent 85%);
+  --grad-wordmark: linear-gradient(180deg, rgba(255, 226, 154, 0.4), rgba(168, 120, 255, 0.16) 60%, rgba(168, 120, 255, 0.1) 100%);
 
   --line: rgba(255, 255, 255, 0.09);
   --line-strong: rgba(255, 255, 255, 0.16);
@@ -110,7 +110,7 @@
   --grad-iris: linear-gradient(100deg, #b7791f 0%, #e0962c 22%, #e5484d 48%, #7c3aed 74%, #b7791f 100%);
   --grad-heading: linear-gradient(180deg, #0d0f1c 30%, #3d4266 100%);
   --grad-ghost: linear-gradient(180deg, rgba(20, 24, 50, 0.16), rgba(20, 24, 50, 0.02));
-  --grad-wordmark: linear-gradient(180deg, rgba(208, 140, 10, 0.32), rgba(124, 58, 237, 0.12) 55%, transparent 85%);
+  --grad-wordmark: linear-gradient(180deg, rgba(208, 140, 10, 0.32), rgba(124, 58, 237, 0.16) 60%, rgba(124, 58, 237, 0.1) 100%);
 
   --line: rgba(20, 24, 50, 0.1);
   --line-strong: rgba(20, 24, 50, 0.16);

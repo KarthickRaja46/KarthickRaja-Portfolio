@@ -16,6 +16,7 @@ import Skills from './components/Skills';
 import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
+import Outro from './components/Outro';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
 
@@ -54,6 +55,7 @@ export default function App() {
           <Education />
           <Certifications />
           <Contact />
+          <Outro />
         </main>
         <Footer />
         <FloatingActions />

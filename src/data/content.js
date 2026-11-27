@@ -72,7 +72,7 @@ export const about = {
   eyebrow: 'About me',
   title: 'A data analyst who turns raw data into *clarity*',
   intro:
-    'Data analyst with over a year of experience in retail and sales data. Cleaned and modeled 500K+ transaction records in SQL at Besant Technologies, Chennai, and built sales pipeline reporting for a Dubai engineering company. Automated a weekly report that saved 12+ hours and cut reporting delays by 35%. Takes business questions from raw data through SQL and Python analysis to clear reports that managers use for decisions.',
+    'Data analyst with over a year of experience in retail and sales data. Cleaned and modeled 500K+ transaction records in SQL and built sales pipeline reporting for a Dubai engineering company. Automated a weekly report that saved 12+ hours and cut reporting delays by 35%. Takes business questions from raw data through SQL and Python analysis to clear reports that managers use for decisions.',
   details: [
     { label: 'Name', value: 'Karthick Raja L' },
     { label: 'Role', value: 'Data Analyst (SQL · Python · Power BI)' },
@@ -99,7 +99,7 @@ export const levelLabels = { 3: 'Advanced', 2: 'Strong', 1: 'Working Knowledge' 
 
 // chart: the decorative mini-visual drawn in each tile ('bars' | 'donut' | 'line' | 'gauge')
 export const stats = [
-  { value: 9, label: 'Live BI & analytics projects', chart: 'bars' },
+  { value: 9, label: 'BI & analytics projects', chart: 'bars' },
   { value: 7, label: 'Certifications & credentials', chart: 'donut' },
   { value: 500, suffix: 'K+', label: 'Transaction records modeled', duration: 2.6, chart: 'line' },
   { value: 12, suffix: '+', label: 'Hours saved weekly', chart: 'gauge' },
@@ -124,7 +124,7 @@ export const process = {
     },
     {
       title: 'Ship',
-      text: 'Deploy automated refresh via Power BI Gateway and Azure pipelines, enforce Row-Level Security (RLS), and deliver actionable dashboards.',
+      text: 'Publish to Power BI Service with scheduled refresh, enforce Row-Level Security (RLS), and deliver actionable dashboards.',
     },
   ],
   toolsLabel: 'Tools I use daily',
@@ -145,72 +145,51 @@ export const experience = {
   eyebrow: 'Experience',
   title: 'Work *history*',
   subtitle:
-    'From retail transaction pipelines and EDA in Chennai to commercial reporting in Dubai — a timeline of hands-on impact.',
+    'From commercial BI for a Dubai engineering firm to full-time analytics in Tamil Nadu — a timeline of hands-on impact.',
+  // Newest first. `kind: 'break'` renders as a lighter, secondary timeline entry.
   roles: [
     {
-      period: 'Jan 2026 – Jul 2026',
-      company: 'Besant Technologies',
-      location: 'Chennai, India',
+      id: 'digisailor',
+      period: 'May 2026 – Nov 2026',
+      company: 'Digisailor',
+      employment: 'Full-time',
+      location: 'Thoothukudi (Tuticorin), Tamil Nadu, India',
+      mode: 'On-site',
       title: 'Data Analyst',
-      groups: [
-        {
-          title: 'SQL Data Transformation & Exploratory Analysis',
-          points: [
-            'Cleaned and standardized 500K+ retail transaction records in SQL using CTEs, joins and window functions.',
-            'Performed EDA in SQL and Python (Pandas) to identify sales trends, churn indicators and fulfillment delays.',
-            'Analyzed product and segment performance to identify top-selling and underperforming lines.',
-          ],
-        },
-        {
-          title: 'Power BI Dashboards & Cloud Automation',
-          points: [
-            'Built Power BI dashboards for retail sales, customer behavior and fulfillment on one consistent data model.',
-            'Staged data in Azure and automated refresh via Power BI Gateway, cutting reporting delays by 35%.',
-          ],
-        },
+      points: [
+        'Built and maintained Power BI dashboards and reports on sales, commercial and operational data for business intelligence.',
+        'Wrote and optimised SQL (joins, CTEs, window functions) to clean, validate and transform large datasets.',
+        'Automated recurring reports with Power Query and scheduled refresh, cutting manual reporting effort.',
+        'Ran exploratory analysis in Python (Pandas) and defined KPIs so metrics stayed consistent across management reports.',
       ],
-      stack: [
-        'SQL Server',
-        'MySQL',
-        'Python (Pandas)',
-        'Power BI',
-        'DAX',
-        'Microsoft Azure',
-        'Power BI Gateway',
-        'CTEs & Window Functions',
+      stack: ['Power BI', 'SQL', 'CTEs & Window Functions', 'Power Query', 'Python (Pandas)', 'KPI Design'],
+    },
+    {
+      id: 'career-break',
+      kind: 'break',
+      period: 'Nov 2025 – Apr 2026',
+      company: 'Career Break',
+      title: 'Final-year studies',
+      points: [
+        'Completed my final year of B.E. Computer Science and Engineering — coursework, project work and final-semester exams — graduating in April 2026.',
+        'Kept building data skills through self-driven projects in SQL, Python and Power BI.',
       ],
     },
     {
+      id: 'enjay',
       period: 'May 2025 – Nov 2025',
-      company: 'Enjay Engineering',
+      company: 'Enjay Engineering Services',
+      employment: 'Contract',
       location: 'Dubai, UAE',
-      mode: 'Remote, Contract',
-      title: 'BI Analyst',
-      testimonial: null,
-      groups: [
-        {
-          title: 'Commercial KPIs & Margin Analysis',
-          points: [
-            'Defined win rate, quotation aging and conversion KPIs with regional sales managers across all open quotations.',
-            'Analyzed customer, product and pricing data to identify demand trends, margin leakage and stalled quotations.',
-          ],
-        },
-        {
-          title: 'Reporting Automation & DAX Architecture',
-          points: [
-            'Automated the weekly quotation report in Power Query, saving 12+ hours of manual work every week.',
-            'Built a star-schema model and 30+ DAX measures (YoY growth, conversion, aging), validated against source data.',
-          ],
-        },
+      mode: 'Remote',
+      title: 'BI Analyst / Power BI Developer',
+      points: [
+        'Built KPI dashboards for the engineering quotation and commercial pipeline, giving leadership visibility into AED 15M+ of active opportunities.',
+        'Designed Star Schema data models with 30+ DAX measures and Row-Level Security for regional sales managers.',
+        'Automated the weekly quotation report in Power Query, saving 12+ hours a week.',
+        'Analysed customer, regional, product and pricing data to surface demand trends and margin leakage.',
       ],
-      stack: [
-        'Power BI',
-        'DAX',
-        'Power Query (M)',
-        'Star Schema',
-        'SQL',
-        'Row-Level Security',
-      ],
+      stack: ['Power BI', 'DAX', 'Power Query', 'Star Schema', 'Row-Level Security'],
     },
   ],
 };
@@ -311,9 +290,9 @@ export const projects = {
     },
     {
       title: 'Steel Quotation & Sales Analytics',
-      category: 'Client Project · Enjay Engineering',
+      category: 'Client Project · Enjay Engineering Services',
       description:
-        'Commercial sales and pipeline analytics for Enjay Engineering (Dubai): automated weekly reporting in Power Query saving 12+ hours, built a star-schema model with 30+ DAX measures, and analyzed quotation aging, win rate, and margins.',
+        'Commercial sales and pipeline analytics for Enjay Engineering Services (Dubai): automated weekly reporting in Power Query saving 12+ hours, built a star-schema model with 30+ DAX measures, and analyzed quotation aging, win rate, and margins.',
       tags: ['Power BI', 'DAX', 'SQL', 'Power Query', 'Star Schema', 'RLS'],
       url: null,
       github: null,
@@ -443,7 +422,7 @@ export const education = {
 export const certifications = {
   eyebrow: 'Credentials',
   title: 'Certifications & *courses*',
-  subtitle: 'Industry-recognized credentials in Azure cloud, data analytics, BI modeling, and Python from Microsoft, Google, and IBM.',
+  subtitle: 'Industry-recognized credentials in Azure cloud, data analytics, BI modeling, and generative AI from Microsoft, Google, IBM, and LinkedIn.',
   items: [
     {
       issuer: 'Microsoft',
@@ -496,6 +475,16 @@ export const contact = {
   subtitle: 'Always happy to discuss analytics, data pipelines, dashboard design, or full-time opportunities.',
   formTitle: 'Have an opportunity or question?',
   formIntro: 'Drop me a message and I’ll get back to you promptly.',
+};
+
+// Closing "outro" before the footer: a SQL console that finds you.
+export const outro = {
+  eyebrow: 'One last query',
+  title: 'Still *searching?*',
+  subtitle: 'Let me save you a JOIN or two.',
+  file: 'find_analyst.sql',
+  stack: 'SQL · Python · Power BI',
+  matched: '1 row matched — looks like your search is over.',
 };
 
 export const quote = {

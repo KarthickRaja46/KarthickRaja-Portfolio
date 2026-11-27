@@ -1,3 +1,7 @@
+// NOTE (2026-11-27): the site's downloadable CVs in public/assets are now copied from the
+// hand-maintained one-page resumes (Desktop\KR RESUME\Resumes (One Page)), which list only
+// Digisailor under Work Experience. Running this script overwrites them with an older layout
+// that also lists Enjay — don't run it unless you mean to replace those PDFs.
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -220,7 +224,7 @@ const htmlContent = `<!DOCTYPE html>
 <div class="section">
   <div class="section-title">Profile Summary</div>
   <p class="summary">
-    Data analyst with over a year of experience in retail and sales data. Cleaned and modeled 500K+ transaction records in SQL at Besant Technologies, Chennai, and built sales pipeline reporting for a Dubai engineering company. Automated a weekly report that saved 12+ hours and cut reporting delays by 35%. Takes business questions from raw data through SQL and Python analysis to clear reports that managers use for decisions.
+    Data analyst with over a year of experience in retail and sales data. Cleaned and modeled 500K+ transaction records in SQL and built sales pipeline reporting for a Dubai engineering company. Automated a weekly report that saved 12+ hours and cut reporting delays by 35%. Takes business questions from raw data through SQL and Python analysis to clear reports that managers use for decisions.
   </p>
 </div>
 
@@ -240,30 +244,29 @@ const htmlContent = `<!DOCTYPE html>
   
   <div class="job">
     <div class="job-head">
-      <div class="job-company">Besant Technologies <span style="font-weight:normal; color:#475569;">| Chennai, India</span></div>
-      <div class="job-period">Jan 2026 &ndash; Jul 2026</div>
+      <div class="job-company">Digisailor <span style="font-weight:normal; color:#475569;">| Thoothukudi (Tuticorin), Tamil Nadu, India (Full-time, On-site)</span></div>
+      <div class="job-period">May 2026 &ndash; Nov 2026</div>
     </div>
     <div class="job-role">Data Analyst</div>
     <ul class="bullets">
-      <li>Cleaned and standardized 500K+ retail transaction records in SQL using CTEs, joins and window functions.</li>
-      <li>Performed EDA in SQL and Python (Pandas) to identify sales trends, churn indicators and fulfillment delays.</li>
-      <li>Analyzed product and segment performance to identify top-selling and underperforming lines.</li>
-      <li>Built Power BI dashboards for retail sales, customer behavior and fulfillment on one consistent data model.</li>
-      <li>Staged data in Azure and automated refresh via Power BI Gateway, cutting reporting delays by 35%.</li>
+      <li>Built and maintained Power BI dashboards and reports on sales, commercial and operational data for business intelligence.</li>
+      <li>Wrote and optimised SQL (joins, CTEs, window functions) to clean, validate and transform large datasets.</li>
+      <li>Automated recurring reports with Power Query and scheduled refresh, cutting manual reporting effort.</li>
+      <li>Ran exploratory analysis in Python (Pandas) and defined KPIs so metrics stayed consistent across management reports.</li>
     </ul>
   </div>
 
   <div class="job" style="margin-bottom: 2px;">
     <div class="job-head">
-      <div class="job-company">Enjay Engineering <span style="font-weight:normal; color:#475569;">| Dubai, UAE (Remote, Contract)</span></div>
+      <div class="job-company">Enjay Engineering Services <span style="font-weight:normal; color:#475569;">| Dubai, UAE (Contract, Remote)</span></div>
       <div class="job-period">May 2025 &ndash; Nov 2025</div>
     </div>
-    <div class="job-role">BI Analyst</div>
+    <div class="job-role">BI Analyst / Power BI Developer</div>
     <ul class="bullets">
-      <li>Defined win rate, quotation aging and conversion KPIs with regional sales managers across all open quotations.</li>
-      <li>Automated the weekly quotation report in Power Query, saving 12+ hours of manual work every week.</li>
-      <li>Built a star-schema model and 30+ DAX measures (YoY growth, conversion, aging), validated against source data.</li>
-      <li>Analyzed customer, product and pricing data to identify demand trends, margin leakage and stalled quotations.</li>
+      <li>Built KPI dashboards for the engineering quotation and commercial pipeline, giving leadership visibility into AED 15M+ of active opportunities.</li>
+      <li>Designed Star Schema data models with 30+ DAX measures and Row-Level Security for regional sales managers.</li>
+      <li>Automated the weekly quotation report in Power Query, saving 12+ hours a week.</li>
+      <li>Analysed customer, regional, product and pricing data to surface demand trends and margin leakage.</li>
     </ul>
   </div>
 </div>

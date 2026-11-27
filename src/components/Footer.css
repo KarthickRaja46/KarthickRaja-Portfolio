@@ -76,6 +76,7 @@
 .footer__top {
   display: inline-flex;
   align-items: center;
+  min-height: 24px; /* WCAG 2.2 minimum touch target */
   gap: 0.45rem;
   font-size: 0.75rem;
   font-weight: 700;
@@ -98,10 +99,13 @@
 }
 
 .footer__wordmark {
-  margin: 0 0 -0.18em;
-  font-size: 15.5vw;
+  /* Full name stays fully visible: no negative margin, and room for the "j" descender
+     (gradient-clipped text is invisible outside the element's box). */
+  margin: 0;
+  padding: 0 var(--gutter) 0.12em;
+  font-size: 14vw;
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.12;
   letter-spacing: -0.06em;
   text-align: center;
   white-space: nowrap;
@@ -117,5 +121,11 @@
   .footer__bottom {
     flex-direction: column;
     text-align: center;
+  }
+
+  /* Narrower on phones so the floating buttons (bottom-right) don't cover "Raja". */
+  .footer__wordmark {
+    padding-bottom: calc(0.12em + 1rem);
+    font-size: 10.5vw;
   }
 }
